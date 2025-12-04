@@ -1919,17 +1919,18 @@ color: hsla(0, 100%, 50%, 0.5); <span class="comment">/* Red with transparency *
 
             <h3>What It Is (In Simple Terms)</h3>
             <p>Imagine you're explaining advanced css to a middle schooler. How would you do it? Let's try:</p>
-            <p>Advanced CSS is like [analogy]. Just as [analogy explanation], advanced css allows us to [purpose].</p>
+            <p>Advanced CSS is like having a professional toolkit instead of basic tools. Just as a master craftsman uses specialized tools for precision work, advanced CSS allows us to create sophisticated, responsive, and animated web experiences that were impossible with basic CSS.</p>
 
             <h3>Why It Exists</h3>
-            <p>Every technology exists to solve a problem. Advanced CSS solves the problem of [problem]. Before advanced css, developers had to [old way]. Now, with advanced css, we can [new way].</p>
+            <p>Every technology exists to solve a problem. Advanced CSS solves the problem of creating modern, interactive, and responsive web experiences. Before advanced CSS, developers had to rely on JavaScript for animations, use complex hacks for layouts, and struggle with browser compatibility. Now, with advanced CSS, we can create smooth animations, complex layouts, and responsive designs using pure CSS, resulting in better performance and maintainability.</p>
 
             <h3>How It Works (Step by Step)</h3>
-            <p>Let's break down exactly how advanced css works, step by step:</p>
+            <p>Let's break down exactly how advanced CSS works, step by step:</p>
             <ol>
-                <li><strong>Step 1:</strong> [First step explanation]</li>
-                <li><strong>Step 2:</strong> [Second step explanation]</li>
-                <li><strong>Step 3:</strong> [Third step explanation]</li>
+                <li><strong>Step 1: Browser Parsing</strong> The browser reads your CSS and parses it into a structured format. It understands selectors, properties, and values, building a CSS Object Model (CSSOM).</li>
+                <li><strong>Step 2: Cascade and Specificity</strong> The browser applies cascade rules and calculates specificity to determine which styles apply to each element. More specific selectors override less specific ones.</li>
+                <li><strong>Step 3: Layout Calculation</strong> The browser calculates the layout using the box model, positioning, and layout algorithms (Flexbox, Grid). This determines where each element appears on the page.</li>
+                <li><strong>Step 4: Rendering</strong> Finally, the browser paints pixels to the screen, applying colors, borders, shadows, and other visual properties. Animations and transitions are calculated frame by frame.</li>
             </ol>
 
             <p>Each step builds on the previous one. Understanding this flow is crucial.</p>
@@ -1948,55 +1949,126 @@ color: hsla(0, 100%, 50%, 0.5); <span class="comment">/* Red with transparency *
 
             <p>Let's break this down line by line:</p>
             <ul>
-                <li>Line 1: [Explanation]</li>
-                <li>Line 2: [Explanation]</li>
-                <li>Line 3: [Explanation]</li>
+                <li>Line 1: The comment explains this is a simple example. Comments in CSS use /* */ syntax and help document your code.</li>
+                <li>Line 2: This comment indicates we'll build complexity from this base. It's good practice to document your learning progression.</li>
+                <li>Line 3: The function declaration creates a reusable block of code. In CSS, we use selectors and properties instead of functions.</li>
             </ul>
 
             <h3>Example 2: Adding Complexity</h3>
-            <p>Now let's add one layer of complexity:</p>
+            <p>Now let's add one layer of complexity with CSS transitions:</p>
             <div class="code-block">
-<code><span class="comment">// Now we're adding [feature]</span>
-<span class="keyword">function</span> <span class="function">complexExample</span>(param) {
-    <span class="keyword">if</span> (param) {
-        <span class="keyword">return</span> <span class="string">"Yes"</span>;
-    }
-    <span class="keyword">return</span> <span class="string">"No"</span>;
+<code><span class="comment">/* Now we're adding transitions for smooth animations */</span>
+.button {
+    background-color: blue;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: red;
+    <span class="comment">/* Smoothly transitions from blue to red over 0.3 seconds */</span>
 }</code>
             </div>
 
-            <p>Notice how we built on the simple example? This is how you learn—start simple, add complexity gradually.</p>
+            <p>Notice how we built on the simple example? This is how you learn—start simple, add complexity gradually. The transition property makes the color change smooth instead of instant.</p>
 
             <h2>Common Patterns and Best Practices</h2>
-            <p>As you work with advanced css, you'll notice patterns. Here are the most important ones:</p>
+            <p>As you work with advanced CSS, you'll notice patterns. Here are the most important ones:</p>
 
-            <h3>Pattern 1: [Pattern Name]</h3>
-            <p>[Pattern explanation]</p>
+            <h3>Pattern 1: Mobile-First Responsive Design</h3>
+            <p>Start with mobile styles as the default, then enhance for larger screens using media queries. This ensures your site works on all devices.</p>
             <div class="code-block">
-<code><span class="comment">// Pattern example</span>
-<span class="comment">// [Explanation of when to use this pattern]</span></code>
+<code><span class="comment">/* Mobile-first: Start with mobile styles */</span>
+.container {
+    width: 100%;
+    padding: 10px;
+}
+
+<span class="comment">/* Then enhance for larger screens */</span>
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+}
+
+<span class="comment">/* Explanation: Mobile-first is better because mobile devices are more constrained. 
+   It's easier to add features for larger screens than to remove them for smaller ones. */</span></code>
             </div>
 
-            <h3>Pattern 2: [Pattern Name]</h3>
-            <p>[Pattern explanation]</p>
+            <h3>Pattern 2: CSS Custom Properties (Variables)</h3>
+            <p>Use CSS variables for values you'll reuse, making your code more maintainable and enabling easy theming.</p>
+            <div class="code-block">
+<code>:root {
+    --primary-color: #2563eb;
+    --spacing: 20px;
+    --border-radius: 8px;
+}
+
+.button {
+    background-color: var(--primary-color);
+    padding: var(--spacing);
+    border-radius: var(--border-radius);
+}
+
+<span class="comment">/* Change one value, update everywhere */</span></code>
+            </div>
 
             <h2>Common Mistakes (And How to Avoid Them)</h2>
-            <p>Everyone makes mistakes when learning. Here are the most common ones with advanced css, and how to avoid them:</p>
+            <p>Everyone makes mistakes when learning. Here are the most common ones with advanced CSS, and how to avoid them:</p>
 
-            <h3>Mistake 1: [Common Mistake]</h3>
-            <p><strong>What happens:</strong> [Explanation of the mistake]</p>
-            <p><strong>Why it happens:</strong> [Reason]</p>
-            <p><strong>How to fix it:</strong> [Solution]</p>
+            <h3>Mistake 1: Animating Layout Properties</h3>
+            <p><strong>What happens:</strong> Animating properties like width, height, or margin causes the browser to recalculate layout on every frame, resulting in janky, slow animations.</p>
+            <p><strong>Why it happens:</strong> Layout recalculation is expensive. The browser must recalculate positions of all elements when layout properties change.</p>
+            <p><strong>How to fix it:</strong> Use transform and opacity instead. These properties are GPU-accelerated and don't trigger layout recalculation.</p>
+            <div class="code-block">
+<code><span class="comment">/* Bad: Animating width causes layout recalculation */</span>
+.element {
+    width: 100px;
+    transition: width 0.3s;
+}
+.element:hover {
+    width: 200px;  <span class="comment">/* Slow! */</span>
+}
 
-            <h3>Mistake 2: [Another Common Mistake]</h3>
-            <p>[Explanation]</p>
+<span class="comment">/* Good: Use transform instead */</span>
+.element {
+    transform: scaleX(1);
+    transition: transform 0.3s;
+}
+.element:hover {
+    transform: scaleX(2);  <span class="comment">/* Fast! GPU-accelerated */</span>
+}</code>
+            </div>
+
+            <h3>Mistake 2: Not Using CSS Grid for Complex Layouts</h3>
+            <p>Many developers still use floats or complex Flexbox hacks for grid layouts. CSS Grid is specifically designed for two-dimensional layouts and is much simpler.</p>
+            <div class="code-block">
+<code><span class="comment">/* Old way: Complex Flexbox hack */</span>
+.container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.item {
+    flex: 0 0 calc(33.333% - 20px);
+    margin: 10px;
+}
+
+<span class="comment">/* Modern way: CSS Grid */</span>
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+<span class="comment">/* Much simpler and more powerful! */</span></code>
+            </div>
 
             <h2>Real-World Applications</h2>
-            <p>Where is advanced css actually used in the real world?</p>
+            <p>Where is advanced CSS actually used in the real world?</p>
             <ul>
-                <li><strong>Application 1:</strong> [How it's used]</li>
-                <li><strong>Application 2:</strong> [How it's used]</li>
-                <li><strong>Application 3:</strong> [How it's used]</li>
+                <li><strong>Application 1: E-commerce Sites</strong> Product galleries use CSS Grid for responsive layouts. Image hover effects use transitions. Shopping cart animations use keyframe animations.</li>
+                <li><strong>Application 2: Social Media Platforms</strong> Feed layouts use CSS Grid. Smooth scrolling uses CSS scroll-behavior. Dark mode uses CSS custom properties for theming.</li>
+                <li><strong>Application 3: Dashboard Applications</strong> Complex data tables use CSS Grid. Interactive charts use CSS animations. Responsive sidebars use media queries and Flexbox.</li>
             </ul>
 
             <p>Understanding real-world applications helps you see the bigger picture and motivates your learning.</p>
@@ -2004,17 +2076,18 @@ color: hsla(0, 100%, 50%, 0.5); <span class="comment">/* Red with transparency *
             <h2>Advanced Topics</h2>
             <p>Once you've mastered the basics, here are advanced topics to explore:</p>
             <ul>
-                <li>[Advanced topic 1]</li>
-                <li>[Advanced topic 2]</li>
-                <li>[Advanced topic 3]</li>
+                <li><strong>Container Queries:</strong> Style elements based on container size, not viewport size. This enables component-level responsive design.</li>
+                <li><strong>CSS Houdini:</strong> Low-level APIs that let you extend CSS itself. Create custom properties, paint worklets, and layout worklets.</li>
+                <li><strong>CSS Scroll Snap:</strong> Control scroll behavior, creating smooth, snap-to-section scrolling experiences.</li>
+                <li><strong>CSS Subgrid:</strong> Nested grids that inherit the parent grid's tracks, enabling complex nested layouts.</li>
             </ul>
 
             <h2>Practice Exercises</h2>
             <p>Learning by doing is essential. Try these exercises:</p>
             <ol>
-                <li><strong>Exercise 1:</strong> [Description]</li>
-                <li><strong>Exercise 2:</strong> [Description]</li>
-                <li><strong>Exercise 3:</strong> [Description]</li>
+                <li><strong>Exercise 1: Create a Responsive Card Grid</strong> Build a grid of cards that adapts from 1 column on mobile to 3 columns on desktop. Use CSS Grid and media queries. Add hover effects with transitions.</li>
+                <li><strong>Exercise 2: Build an Animated Navigation Menu</strong> Create a navigation menu that slides in from the side on mobile. Use transform and transitions. Add a hamburger icon animation.</li>
+                <li><strong>Exercise 3: Design a Loading Spinner</strong> Create a spinning loader using CSS keyframe animations. Make it smooth and performant using transform: rotate().</li>
             </ol>
 
             <div class="callout callout-info">
@@ -2025,48 +2098,200 @@ color: hsla(0, 100%, 50%, 0.5); <span class="comment">/* Red with transparency *
             
 
             <h2>Advanced Concepts and Deep Dive</h2>
-            <p>Now that we've covered the basics, let's go deeper into advanced css. Understanding these advanced concepts will make you a more capable developer.</p>
+            <p>Now that we've covered the basics, let's go deeper into advanced CSS. Understanding these advanced concepts will make you a more capable developer.</p>
 
             <h3>Understanding the Internals</h3>
-            <p>To truly master advanced css, it helps to understand how it works under the hood. Let's explore the internals:</p>
+            <p>To truly master advanced CSS, it helps to understand how it works under the hood. Let's explore the internals:</p>
+            
+            <h4>How CSS Processes Data</h4>
+            <p>When a browser loads a webpage, it processes CSS in several stages:</p>
+            <ol>
+                <li><strong>Parsing:</strong> The browser reads CSS text and converts it into a CSS Object Model (CSSOM), a tree structure representing all styles.</li>
+                <li><strong>Cascade Resolution:</strong> The browser determines which styles apply to each element by calculating specificity and following cascade rules (important, inline styles, IDs, classes, elements).</li>
+                <li><strong>Layout Calculation:</strong> The browser calculates the position and size of each element using the box model, positioning rules, and layout algorithms (normal flow, Flexbox, Grid).</li>
+                <li><strong>Paint:</strong> The browser fills in pixels with colors, borders, shadows, and other visual properties.</li>
+                <li><strong>Composite:</strong> The browser layers elements and applies transforms, opacity, and filters. This is where GPU acceleration happens.</li>
+            </ol>
+            
+            <h4>Memory Management</h4>
+            <p>CSS doesn't directly manage memory like programming languages, but it affects browser memory usage:</p>
             <ul>
-                <li><strong>How it processes data:</strong> [Detailed explanation]</li>
-                <li><strong>Memory management:</strong> [How memory is handled]</li>
-                <li><strong>Performance considerations:</strong> [What affects performance]</li>
-                <li><strong>Optimization techniques:</strong> [How to optimize]</li>
+                <li><strong>Large stylesheets:</strong> Unused CSS rules consume memory. Use tools like PurgeCSS to remove unused styles.</li>
+                <li><strong>Complex selectors:</strong> Deeply nested selectors require more memory to match. Keep selectors simple.</li>
+                <li><strong>Animations:</strong> GPU-accelerated animations (transform, opacity) use less memory than layout-triggering animations.</li>
             </ul>
+            
+            <h4>Performance Considerations</h4>
+            <p>Several factors affect CSS performance:</p>
+            <ul>
+                <li><strong>Selector complexity:</strong> Simple selectors (class, ID) are faster than complex selectors (descendant, attribute).</li>
+                <li><strong>Layout thrashing:</strong> Changing layout properties (width, height, margin) forces recalculation. Use transform instead.</li>
+                <li><strong>Repaints:</strong> Changing visual properties (color, background) triggers repaints. Batch changes together.</li>
+                <li><strong>File size:</strong> Larger CSS files take longer to download and parse. Minify and compress CSS.</li>
+            </ul>
+            
+            <h4>Optimization Techniques</h4>
+            <p>Here's how to optimize CSS for performance:</p>
+            <ol>
+                <li><strong>Use efficient selectors:</strong> Prefer classes over tag selectors. Avoid deep nesting.</li>
+                <li><strong>Minify CSS:</strong> Remove whitespace and comments. Use tools like cssnano.</li>
+                <li><strong>Critical CSS:</strong> Inline critical CSS (above-the-fold content) to reduce render-blocking.</li>
+                <li><strong>Use will-change:</strong> Hint to the browser which properties will animate for better optimization.</li>
+                <li><strong>Avoid @import:</strong> Use link tags instead. @import blocks rendering.</li>
+            </ol>
 
             <h3>Edge Cases and Gotchas</h3>
-            <p>Every technology has edge cases and gotchas. Here are the most important ones for advanced css:</p>
+            <p>Every technology has edge cases and gotchas. Here are the most important ones for advanced CSS:</p>
+            
             <div class="callout callout-warning">
-                <div class="callout-title">⚠️ Common Gotcha</div>
-                <p>[Detailed explanation of a common gotcha and how to avoid it]</p>
+                <div class="callout-title">⚠️ Common Gotcha: z-index Only Works on Positioned Elements</div>
+                <p>Many developers try to use z-index without positioning, but it only works on elements with position: relative, absolute, fixed, or sticky. If z-index isn't working, check if the element is positioned.</p>
+                <div class="code-block">
+<code><span class="comment">/* z-index won't work - element isn't positioned */</span>
+.element {
+    z-index: 10;
+}
+
+<span class="comment">/* z-index works - element is positioned */</span>
+.element {
+    position: relative;
+    z-index: 10;
+}</code>
+                </div>
+            </div>
+            
+            <div class="callout callout-warning">
+                <div class="callout-title">⚠️ Common Gotcha: Percentage Heights Don't Work Without Parent Height</div>
+                <p>Percentage heights require the parent to have an explicit height. Without it, percentage height collapses to auto.</p>
+                <div class="code-block">
+<code><span class="comment">/* Child height won't be 50% - parent has no height */</span>
+.parent {
+    <span class="comment">/* No height specified */</span>
+}
+.child {
+    height: 50%;  <span class="comment">/* Doesn't work! */</span>
+}
+
+<span class="comment">/* Child height works - parent has explicit height */</span>
+.parent {
+    height: 400px;
+}
+.child {
+    height: 50%;  <span class="comment">/* Works! 200px */</span>
+}</code>
+                </div>
             </div>
 
             <h2>Real-World Case Studies</h2>
-            <p>Let's look at how advanced css is used in real production systems:</p>
+            <p>Let's look at how advanced CSS is used in real production systems:</p>
 
-            <h3>Case Study 1: [Real Company/Project]</h3>
-            <p>[Detailed case study explaining how a real company uses this technology, what challenges they faced, and how they solved them]</p>
-
-            <h3>Case Study 2: [Another Real Example]</h3>
-            <p>[Another detailed case study]</p>
+            <h3>Case Study 1: GitHub's Responsive Design</h3>
+            <p>GitHub uses advanced CSS techniques to create a responsive, performant interface:</p>
+            <ul>
+                <li><strong>Challenge:</strong> Support millions of users across devices from phones to large monitors</li>
+                <li><strong>Solution:</strong> Mobile-first responsive design using CSS Grid and Flexbox. They use CSS custom properties for theming.</li>
+                <li><strong>Result:</strong> Fast, responsive interface that works on all devices. Their CSS is highly optimized and performant.</li>
+            </ul>
+            
+            <h3>Case Study 2: Stripe's Dashboard Animations</h3>
+            <p>Stripe uses CSS animations extensively in their dashboard:</p>
+            <ul>
+                <li><strong>Challenge:</strong> Create smooth, professional animations that don't feel sluggish</li>
+                <li><strong>Solution:</strong> They use transform and opacity for all animations (GPU-accelerated). They use CSS transitions for micro-interactions.</li>
+                <li><strong>Result:</strong> Smooth, performant animations that enhance UX without impacting performance. Their dashboard feels fast and responsive.</li>
+            </ul>
 
             <h2>Performance Optimization</h2>
-            <p>Performance matters. Here's how to optimize advanced css for speed:</p>
-            <ul>
-                <li><strong>Optimization Technique 1:</strong> [Detailed explanation with examples]</li>
-                <li><strong>Optimization Technique 2:</strong> [Another technique]</li>
-                <li><strong>Optimization Technique 3:</strong> [Third technique]</li>
-            </ul>
+            <p>Performance matters. Here's how to optimize advanced CSS for speed:</p>
+            
+            <h3>Optimization Technique 1: Use Efficient Selectors</h3>
+            <p>Selector performance matters, especially on large pages:</p>
+            <div class="code-block">
+<code><span class="comment">/* Slow: Complex descendant selector */</span>
+div ul li a {
+    color: blue;
+}
+
+<span class="comment">/* Fast: Simple class selector */</span>
+.nav-link {
+    color: blue;
+}
+
+<span class="comment">/* Even faster: ID selector (but use sparingly) */</span>
+#main-nav {
+    background: white;
+}</code>
+            </div>
+            
+            <h3>Optimization Technique 2: Minimize Layout Thrashing</h3>
+            <p>Avoid changing layout properties in loops or animations:</p>
+            <div class="code-block">
+<code><span class="comment">/* Bad: Causes layout recalculation on every frame */</span>
+@keyframes slide {
+    from { left: 0; }
+    to { left: 100px; }
+}
+
+<span class="comment">/* Good: Uses transform, no layout recalculation */</span>
+@keyframes slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(100px); }
+}</code>
+            </div>
+            
+            <h3>Optimization Technique 3: Use CSS Containment</h3>
+            <p>CSS containment tells the browser which parts of the page are independent, enabling optimizations:</p>
+            <div class="code-block">
+<code><span class="comment">/* Isolate this component - browser can optimize independently */</span>
+.card {
+    contain: layout style paint;
+}
+
+<span class="comment">/* layout: Layout calculations are isolated */</span>
+<span class="comment">/* style: Style calculations are isolated */</span>
+<span class="comment">/* paint: Paint operations are isolated */</span>
+<span class="comment">/* size: Size is known, can skip layout */</span></code>
+            </div>
 
             <h2>Security Considerations</h2>
-            <p>Security is crucial. Here are security best practices for advanced css:</p>
-            <ul>
-                <li><strong>Security Practice 1:</strong> [Detailed explanation]</li>
-                <li><strong>Security Practice 2:</strong> [Another practice]</li>
-                <li><strong>Security Practice 3:</strong> [Third practice]</li>
-            </ul>
+            <p>Security is crucial. Here are security best practices for advanced CSS:</p>
+            
+            <h3>Security Practice 1: Sanitize User-Generated CSS</h3>
+            <p>If users can input CSS, sanitize it to prevent CSS injection attacks:</p>
+            <div class="code-block">
+<code><span class="comment">/* Dangerous: User can inject malicious CSS */</span>
+<span class="comment">/* User input: */</span>
+<span class="comment">/* background: url('javascript:alert("XSS")'); */</span>
+
+<span class="comment">/* Safe: Whitelist allowed properties */</span>
+<span class="keyword">const</span> allowedProperties = [<span class="string">'color'</span>, <span class="string">'background-color'</span>, <span class="string">'font-size'</span>];
+<span class="comment">// Only allow safe properties</span></code>
+            </div>
+            
+            <h3>Security Practice 2: Use Content Security Policy (CSP)</h3>
+            <p>CSP headers prevent CSS injection and other attacks:</p>
+            <div class="code-block">
+<code><span class="comment">/* HTTP Header: */</span>
+<span class="comment">/* Content-Security-Policy: style-src 'self' */</span>
+
+<span class="comment">/* Only allows CSS from same origin */</span>
+<span class="comment">/* Prevents inline styles and external stylesheets from untrusted sources */</span></code>
+            </div>
+            
+            <h3>Security Practice 3: Validate CSS Variables</h3>
+            <p>If CSS variables come from user input, validate them:</p>
+            <div class="code-block">
+<code><span class="comment">/* Dangerous: User can inject malicious values */</span>
+<span class="comment">/* --user-color: url('evil.com/steal'); */</span>
+
+<span class="comment">/* Safe: Validate CSS variable values */</span>
+<span class="keyword">function</span> <span class="function">validateColor</span>(value) {
+    <span class="comment">// Only allow hex colors, rgb, or named colors</span>
+    <span class="keyword">return</span> /^#[0-9A-F]{6}$/i.<span class="function">test</span>(value) || 
+           /^rgb\(/.<span class="function">test</span>(value) ||
+           [<span class="string">'red'</span>, <span class="string">'blue'</span>, <span class="string">'green'</span>].<span class="function">includes</span>(value);
+}</code>
+            </div>
 
             <h2>Integration with Other Technologies</h2>
             <p>Advanced CSS doesn't exist in isolation. Here's how it integrates with other technologies:</p>
@@ -10061,135 +10286,1365 @@ let f = match f {{
             
 
             <h2>Advanced Concepts and Deep Dive</h2>
-            <p>Now that we've covered the basics, let's go deeper into rust basics. Understanding these advanced concepts will make you a more capable developer.</p>
+            <p>Now that we've covered the basics, let's go deeper into Rust. Understanding these advanced concepts will make you a more capable developer.</p>
 
             <h3>Understanding the Internals</h3>
-            <p>To truly master rust basics, it helps to understand how it works under the hood. Let's explore the internals:</p>
+            <p>To truly master Rust, it helps to understand how it works under the hood. Let's explore the internals:</p>
+            
+            <h4>How Rust Processes Data</h4>
+            <p>Rust processes data through its ownership system, which happens at compile time. When you write Rust code, the compiler analyzes every variable, every function call, and every data structure to ensure memory safety. Here's how it works:</p>
+            
+            <p>When you create a value in Rust, it's stored either on the stack (for fixed-size values like integers) or on the heap (for dynamic-size values like Strings). The stack is fast but limited in size. The heap is slower but can grow as needed.</p>
+            
+            <div class="code-block">
+<code><span class="comment">// Stack allocation - fast, fixed size</span>
+<span class="keyword">let</span> x = <span class="number">5</span>;  <span class="comment">// i32 stored on stack</span>
+<span class="keyword">let</span> y = <span class="number">10.5</span>;  <span class="comment">// f64 stored on stack</span>
+
+<span class="comment">// Heap allocation - slower, dynamic size</span>
+<span class="keyword">let</span> s = <span class="function">String</span>::<span class="function">from</span>(<span class="string">"hello"</span>);  <span class="comment">// String stored on heap</span>
+<span class="keyword">let</span> vec = <span class="function">vec!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];  <span class="comment">// Vector stored on heap</span></code>
+            </div>
+            
+            <p>The compiler tracks where each value is stored and ensures that when a value goes out of scope, its memory is automatically freed. This happens through Rust's "drop" mechanism - every type can have a <code class="code-inline">Drop</code> trait implementation that runs when the value is destroyed.</p>
+            
+            <h4>Memory Management: Zero-Cost Abstractions</h4>
+            <p>Rust's memory management is unique: it provides the safety of garbage-collected languages (like Python or Java) with the performance of manual memory management (like C++). This is called "zero-cost abstractions" - you get safety without runtime overhead.</p>
+            
+            <p>Here's how Rust manages memory:</p>
+            <ol>
+                <li><strong>Compile-time checks:</strong> The borrow checker analyzes your code before it runs, preventing memory errors.</li>
+                <li><strong>Ownership rules:</strong> Each value has exactly one owner. When the owner goes out of scope, the value is dropped.</li>
+                <li><strong>Borrowing:</strong> Instead of transferring ownership, you can borrow a reference. References are checked at compile time.</li>
+                <li><strong>Lifetimes:</strong> Rust tracks how long references are valid, preventing dangling pointers.</li>
+            </ol>
+            
+            <div class="code-block">
+<code><span class="comment">// Example: How Rust manages memory</span>
+{
+    <span class="keyword">let</span> s = <span class="function">String</span>::<span class="function">from</span>(<span class="string">"hello"</span>);  <span class="comment">// s owns the String</span>
+    <span class="comment">// s is valid here</span>
+}  <span class="comment">// s goes out of scope, String is automatically dropped</span>
+<span class="comment">// s is no longer valid here - compiler error if you try to use it</span>
+
+<span class="comment">// Borrowing instead of moving</span>
+<span class="keyword">let</span> s1 = <span class="function">String</span>::<span class="function">from</span>(<span class="string">"hello"</span>);
+<span class="keyword">let</span> len = <span class="function">calculate_length</span>(&s1);  <span class="comment">// Borrow s1, don't move it</span>
+<span class="function">println!</span>(<span class="string">"{{}} has length {{}}"</span>, s1, len);  <span class="comment">// s1 still valid!</span>
+
+<span class="keyword">fn</span> <span class="function">calculate_length</span>(s: &<span class="function">String</span>) -> <span class="function">usize</span> {
+    s.<span class="function">len</span>()  <span class="comment">// s is a reference, doesn't own the String</span>
+}  <span class="comment">// s goes out of scope, but nothing is dropped because s doesn't own anything</span></code>
+            </div>
+            
+            <h4>Performance Considerations</h4>
+            <p>Rust is designed for performance. Here's what affects performance in Rust:</p>
             <ul>
-                <li><strong>How it processes data:</strong> [Detailed explanation]</li>
-                <li><strong>Memory management:</strong> [How memory is handled]</li>
-                <li><strong>Performance considerations:</strong> [What affects performance]</li>
-                <li><strong>Optimization techniques:</strong> [How to optimize]</li>
+                <li><strong>Zero-cost abstractions:</strong> High-level features compile down to efficient machine code. Using iterators, for example, is often faster than manual loops because the compiler can optimize them better.</li>
+                <li><strong>No runtime overhead:</strong> Unlike garbage-collected languages, Rust has no garbage collector running in the background. Memory is freed immediately when values go out of scope.</li>
+                <li><strong>LLVM optimizations:</strong> Rust uses LLVM as its backend, which applies aggressive optimizations. Your Rust code gets optimized as well as C++ code.</li>
+                <li><strong>Cache-friendly data structures:</strong> Rust encourages stack allocation and contiguous memory layouts, which are cache-friendly.</li>
             </ul>
+            
+            <div class="code-block">
+<code><span class="comment">// Example: Zero-cost abstraction</span>
+<span class="comment">// This high-level iterator code...</span>
+<span class="keyword">let</span> sum: <span class="function">i32</span> = (<span class="number">1</span>..<span class="number">100</span>).<span class="function">map</span>(|x| x * <span class="number">2</span>).<span class="function">sum</span>();
+
+<span class="comment">// ...compiles to the same efficient code as this manual loop:</span>
+<span class="keyword">let</span> <span class="keyword">mut</span> sum = <span class="number">0</span>;
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">1</span>..<span class="number">100</span> {
+    sum += i * <span class="number">2</span>;
+}</code>
+            </div>
+            
+            <h4>Optimization Techniques</h4>
+            <p>Here are proven optimization techniques for Rust:</p>
+            <ol>
+                <li><strong>Use <code class="code-inline">release</code> mode:</strong> Always compile with <code class="code-inline">cargo build --release</code> for production. This enables all optimizations.</li>
+                <li><strong>Prefer stack over heap:</strong> Use arrays and fixed-size types when possible. They're faster than heap-allocated types.</li>
+                <li><strong>Use iterators:</strong> Iterators are highly optimized and often faster than manual loops.</li>
+                <li><strong>Avoid unnecessary clones:</strong> Use references instead of cloning when possible.</li>
+                <li><strong>Use <code class="code-inline">Vec::with_capacity</code>:</strong> If you know the size of a vector, pre-allocate it to avoid reallocations.</li>
+            </ol>
+            
+            <div class="code-block">
+<code><span class="comment">// Bad: Unnecessary clone</span>
+<span class="keyword">fn</span> <span class="function">process</span>(data: <span class="function">String</span>) {
+    <span class="comment">// ...</span>
+}
+
+<span class="keyword">let</span> s = <span class="function">String</span>::<span class="function">from</span>(<span class="string">"hello"</span>);
+<span class="function">process</span>(s.<span class="function">clone</span>());  <span class="comment">// Expensive clone!</span>
+
+<span class="comment">// Good: Use reference</span>
+<span class="keyword">fn</span> <span class="function">process</span>(data: &<span class="function">str</span>) {  <span class="comment">// Use &str instead of String</span>
+    <span class="comment">// ...</span>
+}
+
+<span class="keyword">let</span> s = <span class="function">String</span>::<span class="function">from</span>(<span class="string">"hello"</span>);
+<span class="function">process</span>(&s);  <span class="comment">// Just borrow, no clone!</span>
+
+<span class="comment">// Good: Pre-allocate vector</span>
+<span class="keyword">let</span> <span class="keyword">mut</span> vec = <span class="function">Vec</span>::<span class="function">with_capacity</span>(<span class="number">1000</span>);  <span class="comment">// Pre-allocate for 1000 items</span>
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span>..<span class="number">1000</span> {
+    vec.<span class="function">push</span>(i);  <span class="comment">// No reallocations!</span>
+}</code>
+            </div>
 
             <h3>Edge Cases and Gotchas</h3>
-            <p>Every technology has edge cases and gotchas. Here are the most important ones for rust basics:</p>
+            <p>Every technology has edge cases and gotchas. Here are the most important ones for Rust:</p>
+            
             <div class="callout callout-warning">
-                <div class="callout-title">⚠️ Common Gotcha</div>
-                <p>[Detailed explanation of a common gotcha and how to avoid it]</p>
+                <div class="callout-title">⚠️ Common Gotcha: Moving After Borrowing</div>
+                <p>One of the most common Rust mistakes is trying to use a value after moving it. When you move a value (transfer ownership), you can't use it anymore:</p>
+                <div class="code-block">
+<code><span class="keyword">let</span> s1 = <span class="function">String</span>::<span class="function">from</span>(<span class="string">"hello"</span>);
+<span class="keyword">let</span> s2 = s1;  <span class="comment">// s1 is moved to s2</span>
+<span class="function">println!</span>(<span class="string">"{{}}"</span>, s1);  <span class="comment">// ERROR! s1 no longer owns the String</span>
+
+<span class="comment">// Solution: Clone if you need both</span>
+<span class="keyword">let</span> s1 = <span class="function">String</span>::<span class="function">from</span>(<span class="string">"hello"</span>);
+<span class="keyword">let</span> s2 = s1.<span class="function">clone</span>();  <span class="comment">// Clone the String</span>
+<span class="function">println!</span>(<span class="string">"{{}}"</span>, s1);  <span class="comment">// OK! s1 still owns its String</span>
+<span class="function">println!</span>(<span class="string">"{{}}"</span>, s2);  <span class="comment">// OK! s2 owns a copy</span>
+
+<span class="comment">// Or use references</span>
+<span class="keyword">let</span> s1 = <span class="function">String</span>::<span class="function">from</span>(<span class="string">"hello"</span>);
+<span class="keyword">let</span> s2 = &s1;  <span class="comment">// Borrow s1</span>
+<span class="function">println!</span>(<span class="string">"{{}}"</span>, s1);  <span class="comment">// OK! s1 still owns the String</span>
+<span class="function">println!</span>(<span class="string">"{{}}"</span>, s2);  <span class="comment">// OK! s2 is just a reference</span></code>
+                </div>
+            </div>
+            
+            <div class="callout callout-warning">
+                <div class="callout-title">⚠️ Common Gotcha: Multiple Mutable References</div>
+                <p>Rust doesn't allow multiple mutable references to the same data at the same time. This prevents data races:</p>
+                <div class="code-block">
+<code><span class="keyword">let</span> <span class="keyword">mut</span> s = <span class="function">String</span>::<span class="function">from</span>(<span class="string">"hello"</span>);
+<span class="keyword">let</span> r1 = &<span class="keyword">mut</span> s;
+<span class="keyword">let</span> r2 = &<span class="keyword">mut</span> s;  <span class="comment">// ERROR! Can't have two mutable references</span>
+
+<span class="comment">// Solution: Use references sequentially</span>
+<span class="keyword">let</span> <span class="keyword">mut</span> s = <span class="function">String</span>::<span class="function">from</span>(<span class="string">"hello"</span>);
+{
+    <span class="keyword">let</span> r1 = &<span class="keyword">mut</span> s;
+    <span class="comment">// Use r1 here</span>
+}  <span class="comment">// r1 goes out of scope</span>
+<span class="keyword">let</span> r2 = &<span class="keyword">mut</span> s;  <span class="comment">// OK! r1 is gone</span></code>
+                </div>
+            </div>
+            
+            <div class="callout callout-warning">
+                <div class="callout-title">⚠️ Common Gotcha: Dangling References</div>
+                <p>Rust prevents dangling references (references to data that no longer exists) through lifetimes:</p>
+                <div class="code-block">
+<code><span class="comment">// This won't compile - dangling reference</span>
+<span class="keyword">fn</span> <span class="function">dangle</span>() -> &<span class="function">String</span> {
+    <span class="keyword">let</span> s = <span class="function">String</span>::<span class="function">from</span>(<span class="string">"hello"</span>);
+    &s  <span class="comment">// ERROR! s goes out of scope, reference would be invalid</span>
+}
+
+<span class="comment">// Solution: Return the String itself (transfer ownership)</span>
+<span class="keyword">fn</span> <span class="function">no_dangle</span>() -> <span class="function">String</span> {
+    <span class="keyword">let</span> s = <span class="function">String</span>::<span class="function">from</span>(<span class="string">"hello"</span>);
+    s  <span class="comment">// Return s, transferring ownership</span>
+}</code>
+                </div>
             </div>
 
             <h2>Real-World Case Studies</h2>
-            <p>Let's look at how rust basics is used in real production systems:</p>
+            <p>Let's look at how Rust is used in real production systems:</p>
 
-            <h3>Case Study 1: [Real Company/Project]</h3>
-            <p>[Detailed case study explaining how a real company uses this technology, what challenges they faced, and how they solved them]</p>
+            <h3>Case Study 1: Dropbox - File Storage System</h3>
+            <p>Dropbox uses Rust for critical parts of their file storage system. They needed a language that was:</p>
+            <ul>
+                <li><strong>Memory-safe:</strong> File storage systems handle massive amounts of data. A memory leak or buffer overflow could corrupt user files.</li>
+                <li><strong>Fast:</strong> Users expect files to sync quickly. Rust's performance matches C++ without the safety issues.</li>
+                <li><strong>Concurrent:</strong> Dropbox handles millions of concurrent file operations. Rust's ownership system prevents data races.</li>
+            </ul>
+            
+            <p><strong>Challenges they faced:</strong></p>
+            <ul>
+                <li>Migrating from Python/C++ codebase to Rust</li>
+                <li>Training their team on Rust's ownership system</li>
+                <li>Integrating Rust code with existing systems</li>
+            </ul>
+            
+            <p><strong>How they solved them:</strong></p>
+            <ul>
+                <li>Gradual migration: They wrote new features in Rust while keeping old code running</li>
+                <li>Extensive training: They provided Rust training to their engineers</li>
+                <li>FFI (Foreign Function Interface): They used Rust's FFI to call Rust from Python and vice versa</li>
+            </ul>
+            
+            <p><strong>Results:</strong> They achieved better performance, eliminated entire classes of bugs, and their Rust code has been running in production for years without memory safety issues.</p>
 
-            <h3>Case Study 2: [Another Real Example]</h3>
-            <p>[Another detailed case study]</p>
+            <h3>Case Study 2: Mozilla Firefox - Browser Engine</h3>
+            <p>Mozilla created Servo, a new browser engine written in Rust. This was a massive undertaking that demonstrated Rust's capabilities:</p>
+            
+            <p><strong>Why Rust:</strong></p>
+            <ul>
+                <li>Browsers are incredibly complex and handle untrusted code from websites</li>
+                <li>Memory safety bugs in browsers can be exploited by attackers</li>
+                <li>Performance is critical - users notice slow browsers immediately</li>
+            </ul>
+            
+            <p><strong>Key achievements:</strong></p>
+            <ul>
+                <li>Parallel CSS parsing: Servo can parse CSS in parallel, making it faster than traditional browsers</li>
+                <li>Memory safety: No memory safety vulnerabilities found in Servo's Rust code</li>
+                <li>Components integrated into Firefox: Parts of Servo are now used in Firefox, improving its performance</li>
+            </ul>
+            
+            <p><strong>Lessons learned:</strong> Rust proved that you can have both safety and performance. The Servo project showed that Rust is ready for production use in the most demanding applications.</p>
+            
+            <h3>Case Study 3: Cloudflare - Edge Computing</h3>
+            <p>Cloudflare uses Rust for their edge computing platform (Workers). They needed to run code at the edge (close to users) with:</p>
+            <ul>
+                <li><strong>Low latency:</strong> Edge computing requires fast startup times</li>
+                <li><strong>Isolation:</strong> Each customer's code must be isolated from others</li>
+                <li><strong>Resource efficiency:</strong> Edge servers have limited resources</li>
+            </ul>
+            
+            <p><strong>Why Rust worked:</strong></p>
+            <ul>
+                <li>Fast startup: Rust programs compile to native code, starting instantly</li>
+                <li>Memory safety: Prevents one customer's code from accessing another's data</li>
+                <li>Small binaries: Rust programs are smaller than interpreted languages, fitting more on edge servers</li>
+            </ul>
+            
+            <p><strong>Results:</strong> Cloudflare Workers can run Rust code at the edge with millisecond startup times, providing a secure, fast platform for edge computing.</p>
 
             <h2>Performance Optimization</h2>
-            <p>Performance matters. Here's how to optimize rust basics for speed:</p>
+            <p>Performance matters. Here's how to optimize Rust code for speed:</p>
+            
+            <h3>Optimization Technique 1: Use Release Mode</h3>
+            <p>Always compile with <code class="code-inline">--release</code> flag for production. Release mode enables:</p>
             <ul>
-                <li><strong>Optimization Technique 1:</strong> [Detailed explanation with examples]</li>
-                <li><strong>Optimization Technique 2:</strong> [Another technique]</li>
-                <li><strong>Optimization Technique 3:</strong> [Third technique]</li>
+                <li>Optimizations: Code is optimized for speed, not debugging</li>
+                <li>Dead code elimination: Unused code is removed</li>
+                <li>Inlining: Small functions are inlined for better performance</li>
+                <li>Loop optimizations: Loops are optimized aggressively</li>
             </ul>
+            
+            <div class="code-block">
+<code><span class="comment">// Debug mode (slow, good for development)</span>
+<span class="function">cargo</span> build
+
+<span class="comment">// Release mode (fast, optimized for production)</span>
+<span class="function">cargo</span> build --release
+
+<span class="comment">// Run release build</span>
+<span class="function">cargo</span> run --release</code>
+            </div>
+            
+            <p>Release builds can be 10-100x faster than debug builds, but take longer to compile.</p>
+            
+            <h3>Optimization Technique 2: Avoid Unnecessary Allocations</h3>
+            <p>Heap allocations are expensive. Avoid them when possible:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// Bad: Creates new String on every iteration</span>
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span>..<span class="number">1000</span> {
+    <span class="keyword">let</span> s = <span class="function">format!</span>(<span class="string">"Number: {{}}"</span>, i);  <span class="comment">// Allocates!</span>
+    <span class="function">process</span>(&s);
+}
+
+<span class="comment">// Good: Reuse the same String</span>
+<span class="keyword">let</span> <span class="keyword">mut</span> s = <span class="function">String</span>::<span class="function">new</span>();
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span>..<span class="number">1000</span> {
+    s.<span class="function">clear</span>();  <span class="comment">// Reuse existing allocation</span>
+    s.<span class="function">push_str</span>(&<span class="function">format!</span>(<span class="string">"Number: {{}}"</span>, i));
+    <span class="function">process</span>(&s);
+}
+
+<span class="comment">// Even better: Use string slices when possible</span>
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span>..<span class="number">1000</span> {
+    <span class="function">process</span>(&<span class="function">format!</span>(<span class="string">"Number: {{}}"</span>, i));  <span class="comment">// Still allocates, but simpler</span>
+}</code>
+            </div>
+            
+            <h3>Optimization Technique 3: Use Iterators Instead of Manual Loops</h3>
+            <p>Rust's iterators are highly optimized and often faster than manual loops:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// Manual loop (slower)</span>
+<span class="keyword">let</span> <span class="keyword">mut</span> sum = <span class="number">0</span>;
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">1</span>..<span class="number">1000</span> {
+    <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span> {
+        sum += i * <span class="number">2</span>;
+    }
+}
+
+<span class="comment">// Iterator (faster, more idiomatic)</span>
+<span class="keyword">let</span> sum: <span class="function">i32</span> = (<span class="number">1</span>..<span class="number">1000</span>)
+    .<span class="function">filter</span>(|x| x % <span class="number">2</span> == <span class="number">0</span>)
+    .<span class="function">map</span>(|x| x * <span class="number">2</span>)
+    .<span class="function">sum</span>();
+
+<span class="comment">// The iterator version is optimized by the compiler and can be parallelized</span>
+<span class="comment">// It's also more readable and less error-prone</span></code>
+            </div>
+            
+            <h3>Optimization Technique 4: Pre-allocate Collections</h3>
+            <p>If you know the size of a collection, pre-allocate it to avoid reallocations:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// Bad: Vector grows multiple times</span>
+<span class="keyword">let</span> <span class="keyword">mut</span> vec = <span class="function">Vec</span>::<span class="function">new</span>();
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span>..<span class="number">1000</span> {
+    vec.<span class="function">push</span>(i);  <span class="comment">// May reallocate multiple times</span>
+}
+
+<span class="comment">// Good: Pre-allocate</span>
+<span class="keyword">let</span> <span class="keyword">mut</span> vec = <span class="function">Vec</span>::<span class="function">with_capacity</span>(<span class="number">1000</span>);
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">0</span>..<span class="number">1000</span> {
+    vec.<span class="function">push</span>(i);  <span class="comment">// No reallocations!</span>
+}
+
+<span class="comment">// Even better: Use collect() with size hint</span>
+<span class="keyword">let</span> vec: <span class="function">Vec</span>&lt;<span class="function">i32</span>&gt; = (<span class="number">0</span>..<span class="number">1000</span>).<span class="function">collect</span>();</code>
+            </div>
+            
+            <h3>Optimization Technique 5: Use Unsafe Code Sparingly</h3>
+            <p>Unsafe Rust can be faster, but use it only when necessary and when you've proven it's needed:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// Safe Rust (preferred)</span>
+<span class="keyword">let</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>];
+<span class="keyword">if</span> <span class="function">let</span> <span class="function">Some</span>(value) = arr.<span class="function">get</span>(<span class="number">2</span>) {
+    <span class="function">println!</span>(<span class="string">"{{}}"</span>, value);
+}
+
+<span class="comment">// Unsafe Rust (only when you've proven it's faster)</span>
+<span class="keyword">unsafe</span> {
+    <span class="keyword">let</span> value = *arr.<span class="function">get_unchecked</span>(<span class="number">2</span>);  <span class="comment">// No bounds check</span>
+    <span class="function">println!</span>(<span class="string">"{{}}"</span>, value);
+}
+
+<span class="comment">// Only use unsafe when profiling shows it's actually faster</span>
+<span class="comment">// The bounds check is usually very fast and prevents crashes</span></code>
+            </div>
+            
+            <h3>Profiling Your Code</h3>
+            <p>Before optimizing, profile your code to find bottlenecks:</p>
+            <ul>
+                <li><strong>cargo flamegraph:</strong> Generate flame graphs to see where time is spent</li>
+                <li><strong>perf (Linux):</strong> Profile CPU usage</li>
+                <li><strong>valgrind:</strong> Find memory leaks and performance issues</li>
+                <li><strong>Built-in benchmarks:</strong> Use Rust's built-in benchmarking tools</li>
+            </ul>
+            
+            <div class="code-block">
+<code><span class="comment">// Add to Cargo.toml:</span>
+<span class="comment">// [dev-dependencies]</span>
+<span class="comment">// criterion = "0.5"</span>
+
+<span class="comment">// Create benches/my_benchmark.rs</span>
+<span class="keyword">use</span> criterion::{black_box, criterion_group, criterion_main, Criterion};
+
+<span class="keyword">fn</span> <span class="function">benchmark_function</span>(c: &<span class="keyword">mut</span> Criterion) {
+    c.<span class="function">bench_function</span>(<span class="string">"my_function"</span>, |b| {
+        b.<span class="function">iter</span>(|| {
+            <span class="comment">// Code to benchmark</span>
+            <span class="function">my_function</span>(black_box(<span class="number">42</span>))
+        })
+    });
+}
+
+criterion_group!(benches, benchmark_function);
+criterion_main!(benches);
+
+<span class="comment">// Run: cargo bench</span></code>
+            </div>
 
             <h2>Security Considerations</h2>
-            <p>Security is crucial. Here are security best practices for rust basics:</p>
+            <p>Security is crucial. Rust's memory safety prevents entire classes of vulnerabilities, but you still need to follow security best practices:</p>
+            
+            <h3>Security Practice 1: Never Use Unsafe Code Unless Necessary</h3>
+            <p>Unsafe Rust bypasses the compiler's safety checks. Only use it when:</p>
             <ul>
-                <li><strong>Security Practice 1:</strong> [Detailed explanation]</li>
-                <li><strong>Security Practice 2:</strong> [Another practice]</li>
-                <li><strong>Security Practice 3:</strong> [Third practice]</li>
+                <li>You need to call C code or system APIs</li>
+                <li>You need performance that safe Rust can't provide (and you've proven it)</li>
+                <li>You're implementing low-level abstractions</li>
             </ul>
+            
+            <div class="code-block">
+<code><span class="comment">// Bad: Using unsafe unnecessarily</span>
+<span class="keyword">unsafe</span> {
+    <span class="keyword">let</span> value = *ptr;  <span class="comment">// Dangerous! No bounds checking</span>
+}
+
+<span class="comment">// Good: Use safe Rust</span>
+<span class="keyword">if</span> <span class="function">let</span> <span class="function">Some</span>(value) = slice.<span class="function">get</span>(index) {
+    <span class="comment">// Safe bounds checking</span>
+}
+
+<span class="comment">// When unsafe is necessary (calling C library)</span>
+<span class="keyword">extern</span> <span class="string">"C"</span> {
+    <span class="keyword">fn</span> <span class="function">c_function</span>(arg: <span class="function">i32</span>) -> <span class="function">i32</span>;
+}
+
+<span class="keyword">unsafe</span> {
+    <span class="keyword">let</span> result = <span class="function">c_function</span>(<span class="number">42</span>);  <span class="comment">// Must be unsafe - calling C code</span>
+}</code>
+            </div>
+            
+            <h3>Security Practice 2: Validate All Input</h3>
+            <p>Even though Rust prevents memory safety issues, you still need to validate input:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// Bad: Trusting user input</span>
+<span class="keyword">fn</span> <span class="function">process_user_data</span>(data: <span class="function">String</span>) {
+    <span class="comment">// No validation - dangerous!</span>
+    <span class="function">save_to_database</span>(data);
+}
+
+<span class="comment">// Good: Validate input</span>
+<span class="keyword">fn</span> <span class="function">process_user_data</span>(data: <span class="function">String</span>) -> <span class="function">Result</span>&lt;(), <span class="function">ValidationError</span>&gt; {
+    <span class="comment">// Validate length</span>
+    <span class="keyword">if</span> data.<span class="function">len</span>() > <span class="number">1000</span> {
+        <span class="keyword">return</span> <span class="function">Err</span>(<span class="function">ValidationError</span>::<span class="function">TooLong</span>);
+    }
+    
+    <span class="comment">// Validate content (no SQL injection, XSS, etc.)</span>
+    <span class="keyword">if</span> data.<span class="function">contains</span>(<span class="string">"&lt;script&gt;"</span>) {
+        <span class="keyword">return</span> <span class="function">Err</span>(<span class="function">ValidationError</span>::<span class="function">InvalidContent</span>);
+    }
+    
+    <span class="function">save_to_database</span>(data);
+    <span class="function">Ok</span>(())
+}</code>
+            </div>
+            
+            <h3>Security Practice 3: Use Cryptographically Secure Random Numbers</h3>
+            <p>For security-sensitive operations (tokens, keys, passwords), use cryptographically secure random number generators:</p>
+            
+            <div class="code-block">
+<code><span class="keyword">use</span> rand::<span class="function">RngCore</span>;
+<span class="keyword">use</span> rand::rngs::<span class="function">OsRng</span>;
+
+<span class="comment">// Bad: Using non-cryptographic RNG for security</span>
+<span class="keyword">use</span> rand::<span class="function">Rng</span>;
+<span class="keyword">let</span> <span class="keyword">mut</span> rng = rand::thread_rng();
+<span class="keyword">let</span> token: <span class="function">u64</span> = rng.<span class="function">gen</span>();  <span class="comment">// Not cryptographically secure!</span>
+
+<span class="comment">// Good: Use cryptographic RNG</span>
+<span class="keyword">let</span> <span class="keyword">mut</span> rng = <span class="function">OsRng</span>;
+<span class="keyword">let</span> <span class="keyword">mut</span> token = [<span class="number">0u8</span>; <span class="number">32</span>];
+rng.<span class="function">fill_bytes</span>(&<span class="keyword">mut</span> token);  <span class="comment">// Cryptographically secure</span>
+
+<span class="comment">// For passwords, use bcrypt or argon2</span>
+<span class="keyword">use</span> bcrypt::{<span class="function">hash</span>, <span class="function">verify</span>, <span class="function">DEFAULT_COST</span>};
+<span class="keyword">let</span> hashed = <span class="function">hash</span>(password, <span class="function">DEFAULT_COST</span>)?;</code>
+            </div>
+            
+            <h3>Security Practice 4: Keep Dependencies Updated</h3>
+            <p>Use tools to check for vulnerable dependencies:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// Install cargo-audit</span>
+<span class="function">cargo</span> install cargo-audit
+
+<span class="comment">// Check for vulnerabilities</span>
+<span class="function">cargo</span> audit
+
+<span class="comment">// Update dependencies</span>
+<span class="function">cargo</span> update
+
+<span class="comment">// Use cargo-deny for more checks</span>
+<span class="function">cargo</span> install cargo-deny
+<span class="function">cargo</span> deny check</code>
+            </div>
+            
+            <h3>Security Practice 5: Don't Log Sensitive Data</h3>
+            <p>Never log passwords, tokens, or other sensitive information:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// Bad: Logging sensitive data</span>
+<span class="function">println!</span>(<span class="string">"User logged in with password: {{}}"</span>, password);  <span class="comment">// NEVER DO THIS!</span>
+
+<span class="comment">// Good: Don't log sensitive data</span>
+<span class="function">println!</span>(<span class="string">"User {{}} logged in successfully"</span>, username);
+
+<span class="comment">// If you must log for debugging, use a secure logger</span>
+<span class="keyword">use</span> log::{<span class="function">info</span>, <span class="function">debug</span>};
+<span class="function">debug!</span>(<span class="string">"Processing request"</span>);  <span class="comment">// Only in debug builds</span>
+<span class="function">info!</span>(<span class="string">"User {{}} logged in"</span>, username);  <span class="comment">// Safe to log</span></code>
+            </div>
+            
+            <h3>Security Practice 6: Use HTTPS for Network Communication</h3>
+            <p>Always use TLS/SSL for network communication:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// Using reqwest with HTTPS</span>
+<span class="keyword">use</span> reqwest;
+
+<span class="keyword">async</span> <span class="keyword">fn</span> <span class="function">make_request</span>() -> <span class="function">Result</span>&lt;<span class="function">String</span>, reqwest::<span class="function">Error</span>&gt; {
+    <span class="keyword">let</span> client = reqwest::<span class="function">Client</span>::<span class="function">new</span>();
+    <span class="keyword">let</span> response = client
+        .<span class="function">get</span>(<span class="string">"https://api.example.com/data"</span>)  <span class="comment">// HTTPS!</span>
+        .<span class="function">send</span>()
+        .<span class="keyword">await</span>?;
+    <span class="function">Ok</span>(response.<span class="function">text</span>().<span class="keyword">await</span>?)
+}
+
+<span class="comment">// For servers, use rustls or native-tls</span>
+<span class="keyword">use</span> rustls::{<span class="function">ServerConfig</span>, <span class="function">NoClientAuth</span>};
+<span class="keyword">use</span> std::sync::<span class="function">Arc</span>;</code>
+            </div>
+            
+            <h3>Common Security Vulnerabilities Rust Prevents</h3>
+            <p>Rust's type system and ownership model prevent many common vulnerabilities:</p>
+            <ul>
+                <li><strong>Buffer overflows:</strong> Impossible in safe Rust - arrays are bounds-checked</li>
+                <li><strong>Use-after-free:</strong> Impossible - ownership system prevents this</li>
+                <li><strong>Double-free:</strong> Impossible - each value has one owner</li>
+                <li><strong>Data races:</strong> Impossible in safe Rust - borrow checker prevents concurrent mutable access</li>
+                <li><strong>Null pointer dereferences:</strong> Impossible - Rust uses Option instead of null</li>
+            </ul>
+            
+            <p>However, Rust doesn't prevent:</p>
+            <ul>
+                <li>Logic errors (bugs in your algorithm)</li>
+                <li>Input validation issues</li>
+                <li>Cryptographic mistakes</li>
+                <li>Business logic vulnerabilities</li>
+            </ul>
+            
+            <p>You still need to write secure code, but Rust eliminates entire classes of vulnerabilities that plague C/C++ programs.</p>
 
             <h2>Integration with Other Technologies</h2>
-            <p>Rust Basics doesn't exist in isolation. Here's how it integrates with other technologies:</p>
+            <p>Rust doesn't exist in isolation. Here's how it integrates with other technologies:</p>
+            
+            <h3>Integration 1: Calling C Code from Rust (FFI)</h3>
+            <p>Rust can call C functions using Foreign Function Interface (FFI). This is essential for:</p>
             <ul>
-                <li><strong>Integration 1:</strong> [How it works with another technology]</li>
-                <li><strong>Integration 2:</strong> [Another integration]</li>
-                <li><strong>Integration 3:</strong> [Third integration]</li>
+                <li>Using existing C libraries</li>
+                <li>Calling system APIs</li>
+                <li>Interfacing with hardware</li>
             </ul>
+            
+            <div class="code-block">
+<code><span class="comment">// Declare external C function</span>
+<span class="keyword">extern</span> <span class="string">"C"</span> {
+    <span class="keyword">fn</span> <span class="function">abs</span>(input: <span class="function">i32</span>) -> <span class="function">i32</span>;
+}
+
+<span class="keyword">fn</span> <span class="function">main</span>() {
+    <span class="keyword">unsafe</span> {
+        <span class="keyword">let</span> result = <span class="function">abs</span>(-<span class="number">5</span>);
+        <span class="function">println!</span>(<span class="string">"Absolute value: {{}}"</span>, result);
+    }
+}
+
+<span class="comment">// Link to C library in Cargo.toml:</span>
+<span class="comment">// [build-dependencies]</span>
+<span class="comment">// cc = "1.0"</span>
+
+<span class="comment">// Or use bindgen to generate bindings automatically</span>
+<span class="comment">// cargo install bindgen</span>
+<span class="comment">// bindgen wrapper.h -o bindings.rs</span></code>
+            </div>
+            
+            <h3>Integration 2: Calling Rust from Python</h3>
+            <p>You can create Python extensions in Rust using PyO3:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// Add to Cargo.toml:</span>
+<span class="comment">// [lib]</span>
+<span class="comment">// name = "rust_lib"</span>
+<span class="comment">// crate-type = ["cdylib"]</span>
+<span class="comment">//</span>
+<span class="comment">// [dependencies]</span>
+<span class="comment">// pyo3 = { version = "0.20", features = ["extension-module"] }</span>
+
+<span class="keyword">use</span> pyo3::prelude::*;
+
+<span class="comment">// Define Python function</span>
+#[<span class="function">pymodule</span>]
+<span class="keyword">fn</span> <span class="function">rust_lib</span>(_py: <span class="function">Python</span>, m: &<span class="function">PyModule</span>) -> <span class="function">PyResult</span>&lt;()&gt; {
+    m.<span class="function">add_function</span>(<span class="function">wrap_pyfunction!</span>(<span class="function">add_numbers</span>, m)?)?;
+    <span class="function">Ok</span>(())
+}
+
+#[<span class="function">pyfunction</span>]
+<span class="keyword">fn</span> <span class="function">add_numbers</span>(a: <span class="function">i32</span>, b: <span class="function">i32</span>) -> <span class="function">i32</span> {
+    a + b
+}
+
+<span class="comment">// Build: maturin develop</span>
+<span class="comment">// Use in Python:</span>
+<span class="comment">// import rust_lib</span>
+<span class="comment">// result = rust_lib.add_numbers(5, 3)</span></code>
+            </div>
+            
+            <h3>Integration 3: Calling Rust from JavaScript (WebAssembly)</h3>
+            <p>Rust can compile to WebAssembly, running in browsers:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// Add to Cargo.toml:</span>
+<span class="comment">// [lib]</span>
+<span class="comment">// crate-type = ["cdylib"]</span>
+<span class="comment">//</span>
+<span class="comment">// [dependencies]</span>
+<span class="comment">// wasm-bindgen = "0.2"</span>
+
+<span class="keyword">use</span> wasm_bindgen::prelude::*;
+
+#[<span class="function">wasm_bindgen</span>]
+<span class="keyword">pub</span> <span class="keyword">fn</span> <span class="function">add</span>(a: <span class="function">i32</span>, b: <span class="function">i32</span>) -> <span class="function">i32</span> {
+    a + b
+}
+
+<span class="comment">// Build: wasm-pack build --target web</span>
+<span class="comment">// Use in JavaScript:</span>
+<span class="comment">// import init, { add } from './pkg/rust_wasm.js';</span>
+<span class="comment">// await init();</span>
+<span class="comment">// const result = add(5, 3);</span></code>
+            </div>
+            
+            <h3>Integration 4: Using Rust with Node.js</h3>
+            <p>Use napi-rs to create Node.js addons in Rust:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// Add to Cargo.toml:</span>
+<span class="comment">// [lib]</span>
+<span class="comment">// crate-type = ["cdylib"]</span>
+<span class="comment">//</span>
+<span class="comment">// [dependencies]</span>
+<span class="comment">// napi = { version = "2", features = ["napi6"] }</span>
+<span class="comment">// napi-derive = "2"</span>
+
+<span class="keyword">use</span> napi_derive::*;
+
+#[<span class="function">napi</span>]
+<span class="keyword">pub</span> <span class="keyword">fn</span> <span class="function">fibonacci</span>(n: <span class="function">u32</span>) -> <span class="function">u64</span> {
+    <span class="keyword">match</span> n {
+        <span class="number">0</span> => <span class="number">0</span>,
+        <span class="number">1</span> => <span class="number">1</span>,
+        _ => <span class="function">fibonacci</span>(n - <span class="number">1</span>) + <span class="function">fibonacci</span>(n - <span class="number">2</span>),
+    }
+}
+
+<span class="comment">// Build: npm run build</span>
+<span class="comment">// Use in Node.js:</span>
+<span class="comment">// const { fibonacci } = require('./target/release/rust_addon.node');</span>
+<span class="comment">// console.log(fibonacci(10));</span></code>
+            </div>
+            
+            <h3>Integration 5: Database Integration</h3>
+            <p>Rust has excellent database libraries:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// Using SQLx (async SQL)</span>
+<span class="keyword">use</span> sqlx::<span class="function">PgPool</span>;
+
+#[<span class="function">tokio</span>::<span class="function">main</span>]
+<span class="keyword">async</span> <span class="keyword">fn</span> <span class="function">main</span>() -> <span class="function">Result</span>&lt;(), sqlx::<span class="function">Error</span>&gt; {
+    <span class="keyword">let</span> pool = <span class="function">PgPool</span>::<span class="function">connect</span>(<span class="string">"postgres://user:pass@localhost/db"</span>).<span class="keyword">await</span>?;
+    
+    <span class="keyword">let</span> row: (<span class="function">i64</span>,) = sqlx::<span class="function">query_as</span>(<span class="string">"SELECT $1"</span>)
+        .<span class="function">bind</span>(<span class="number">150_i64</span>)
+        .<span class="function">fetch_one</span>(&pool)
+        .<span class="keyword">await</span>?;
+    
+    <span class="function">Ok</span>(())
+}
+
+<span class="comment">// Using Diesel (ORM)</span>
+<span class="keyword">use</span> diesel::prelude::*;
+
+<span class="keyword">pub</span> <span class="keyword">fn</span> <span class="function">get_user</span>(conn: &<span class="function">PgConnection</span>, user_id: <span class="function">i32</span>) -> <span class="function">QueryResult</span>&lt;<span class="function">User</span>&gt; {
+    <span class="function">users</span>::table
+        .<span class="function">find</span>(user_id)
+        .<span class="function">first</span>(conn)
+}</code>
+            </div>
+            
+            <h3>Integration 6: HTTP Clients and Servers</h3>
+            <p>Rust has excellent HTTP libraries:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// Using reqwest (HTTP client)</span>
+<span class="keyword">use</span> reqwest;
+
+#[<span class="function">tokio</span>::<span class="function">main</span>]
+<span class="keyword">async</span> <span class="keyword">fn</span> <span class="function">main</span>() -> <span class="function">Result</span>&lt;(), reqwest::<span class="function">Error</span>&gt; {
+    <span class="keyword">let</span> response = reqwest::<span class="function">get</span>(<span class="string">"https://api.example.com/data"</span>)
+        .<span class="keyword">await</span>?
+        .<span class="function">text</span>()
+        .<span class="keyword">await</span>?;
+    
+    <span class="function">println!</span>(<span class="string">"{{}}"</span>, response);
+    <span class="function">Ok</span>(())
+}
+
+<span class="comment">// Using axum (HTTP server)</span>
+<span class="keyword">use</span> axum::{<span class="function">Router</span>, <span class="function">routing</span>::<span class="function">get</span>, <span class="function">Json</span>};
+
+<span class="keyword">async</span> <span class="keyword">fn</span> <span class="function">handler</span>() -> <span class="function">Json</span>&lt;serde_json::<span class="function">Value</span>&gt; {
+    <span class="function">Json</span>(serde_json::<span class="function">json!</span>({<span class="string">"message"</span>: <span class="string">"Hello, World!"</span>}))
+}
+
+#[<span class="function">tokio</span>::<span class="function">main</span>]
+<span class="keyword">async</span> <span class="keyword">fn</span> <span class="function">main</span>() {
+    <span class="keyword">let</span> app = <span class="function">Router</span>::<span class="function">new</span>()
+        .<span class="function">route</span>(<span class="string">"/"</span>, <span class="function">get</span>(<span class="function">handler</span>));
+    
+    <span class="keyword">let</span> listener = <span class="function">tokio</span>::net::<span class="function">TcpListener</span>::<span class="function">bind</span>(<span class="string">"0.0.0.0:3000"</span>).<span class="keyword">await</span>.<span class="function">unwrap</span>();
+    axum::<span class="function">serve</span>(listener, app).<span class="keyword">await</span>.<span class="function">unwrap</span>();
+}</code>
+            </div>
 
             <h2>Debugging and Troubleshooting</h2>
-            <p>When things go wrong, here's how to debug rust basics:</p>
+            <p>When things go wrong, here's how to debug Rust code:</p>
+            
+            <h3>Common Error 1: "Borrow Checker" Errors</h3>
+            <p><strong>What causes it:</strong> The borrow checker prevents data races and memory safety issues. Common causes:</p>
             <ul>
-                <li><strong>Common Error 1:</strong> [What causes it and how to fix it]</li>
-                <li><strong>Common Error 2:</strong> [Another common error]</li>
-                <li><strong>Common Error 3:</strong> [Third common error]</li>
+                <li>Trying to mutate data while it's borrowed</li>
+                <li>Having multiple mutable references</li>
+                <li>Using a value after moving it</li>
             </ul>
+            
+            <p><strong>How to fix it:</strong></p>
+            <div class="code-block">
+<code><span class="comment">// Error: Cannot borrow as mutable because it is also borrowed as immutable</span>
+<span class="keyword">let</span> <span class="keyword">mut</span> vec = <span class="function">vec!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];
+<span class="keyword">let</span> first = &vec[<span class="number">0</span>];  <span class="comment">// Immutable borrow</span>
+vec.<span class="function">push</span>(<span class="number">4</span>);  <span class="comment">// ERROR! Trying to mutate while borrowed</span>
+
+<span class="comment">// Solution: Ensure borrow ends before mutation</span>
+<span class="keyword">let</span> <span class="keyword">mut</span> vec = <span class="function">vec!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];
+{
+    <span class="keyword">let</span> first = &vec[<span class="number">0</span>];  <span class="comment">// Use first here</span>
+    <span class="function">println!</span>(<span class="string">"{{}}"</span>, first);
+}  <span class="comment">// first goes out of scope</span>
+vec.<span class="function">push</span>(<span class="number">4</span>);  <span class="comment">// OK! No active borrows</span>
+
+<span class="comment">// Or clone if you need both</span>
+<span class="keyword">let</span> <span class="keyword">mut</span> vec = <span class="function">vec!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];
+<span class="keyword">let</span> first = vec[<span class="number">0</span>];  <span class="comment">// Copy (works for Copy types like i32)</span>
+vec.<span class="function">push</span>(<span class="number">4</span>);  <span class="comment">// OK!</span></code>
+            </div>
+            
+            <h3>Common Error 2: "Value Moved" Errors</h3>
+            <p><strong>What causes it:</strong> Trying to use a value after transferring ownership:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// Error: Value moved</span>
+<span class="keyword">let</span> s1 = <span class="function">String</span>::<span class="function">from</span>(<span class="string">"hello"</span>);
+<span class="keyword">let</span> s2 = s1;  <span class="comment">// s1 moved to s2</span>
+<span class="function">println!</span>(<span class="string">"{{}}"</span>, s1);  <span class="comment">// ERROR! s1 no longer owns the String</span>
+
+<span class="comment">// Solution 1: Use references</span>
+<span class="keyword">let</span> s1 = <span class="function">String</span>::<span class="function">from</span>(<span class="string">"hello"</span>);
+<span class="keyword">let</span> s2 = &s1;  <span class="comment">// Borrow s1</span>
+<span class="function">println!</span>(<span class="string">"{{}}"</span>, s1);  <span class="comment">// OK!</span>
+<span class="function">println!</span>(<span class="string">"{{}}"</span>, s2);  <span class="comment">// OK!</span>
+
+<span class="comment">// Solution 2: Clone if you need both</span>
+<span class="keyword">let</span> s1 = <span class="function">String</span>::<span class="function">from</span>(<span class="string">"hello"</span>);
+<span class="keyword">let</span> s2 = s1.<span class="function">clone</span>();  <span class="comment">// Clone the String</span>
+<span class="function">println!</span>(<span class="string">"{{}}"</span>, s1);  <span class="comment">// OK!</span>
+<span class="function">println!</span>(<span class="string">"{{}}"</span>, s2);  <span class="comment">// OK!</span></code>
+            </div>
+            
+            <h3>Common Error 3: Lifetime Errors</h3>
+            <p><strong>What causes it:</strong> References that might outlive the data they point to:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// Error: Lifetime mismatch</span>
+<span class="keyword">fn</span> <span class="function">longest</span>(x: &<span class="function">str</span>, y: &<span class="function">str</span>) -> &<span class="function">str</span> {  <span class="comment">// ERROR! Missing lifetime parameter</span>
+    <span class="keyword">if</span> x.<span class="function">len</span>() > y.<span class="function">len</span>() {
+        x
+    } <span class="keyword">else</span> {
+        y
+    }
+}
+
+<span class="comment">// Solution: Add lifetime parameters</span>
+<span class="keyword">fn</span> <span class="function">longest</span>&lt;<span class="function">'a</span>&gt;(x: &<span class="function">'a</span> <span class="function">str</span>, y: &<span class="function">'a</span> <span class="function">str</span>) -> &<span class="function">'a</span> <span class="function">str</span> {
+    <span class="keyword">if</span> x.<span class="function">len</span>() > y.<span class="function">len</span>() {
+        x
+    } <span class="keyword">else</span> {
+        y
+    }
+}
+
+<span class="comment">// The lifetime 'a means: "the returned reference lives as long as both inputs"</span>
+<span class="comment">// This ensures the reference is valid</span></code>
+            </div>
+            
+            <h3>Debugging Tools</h3>
+            <p>Rust has excellent debugging tools:</p>
+            <ul>
+                <li><strong>rustc --explain:</strong> Get detailed explanations of errors</li>
+                <li><strong>cargo clippy:</strong> Linter that catches common mistakes</li>
+                <li><strong>rustfmt:</strong> Code formatter</li>
+                <li><strong>dbg! macro:</strong> Print debugging macro</li>
+                <li><strong>GDB/LLDB:</strong> Debuggers that work with Rust</li>
+            </ul>
+            
+            <div class="code-block">
+<code><span class="comment">// Get error explanation</span>
+<span class="function">rustc</span> --explain E0382
+
+<span class="comment">// Use clippy</span>
+<span class="function">cargo</span> clippy
+
+<span class="comment">// Format code</span>
+<span class="function">cargo</span> fmt
+
+<span class="comment">// Debug macro</span>
+<span class="keyword">let</span> x = <span class="number">5</span>;
+<span class="function">dbg!</span>(x);  <span class="comment">// Prints: [src/main.rs:2] x = 5</span>
+
+<span class="comment">// Debug with GDB</span>
+<span class="function">rust-gdb</span> target/debug/my_program</code>
+            </div>
+            
+            <h3>Common Compiler Messages</h3>
+            <p>Rust's compiler provides helpful error messages. Here's how to read them:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// Example error message:</span>
+<span class="comment">// error[E0382]: borrow of moved value: `s1`</span>
+<span class="comment">//   --> src/main.rs:3:20</span>
+<span class="comment">//    |</span>
+<span class="comment">// 2  |     let s2 = s1;</span>
+<span class="comment">//    |              -- value moved here</span>
+<span class="comment">// 3  |     println!("{}", s1);</span>
+<span class="comment">//    |                    ^^ value borrowed here after move</span>
+<span class="comment">//    |</span>
+<span class="comment">// help: consider cloning the value if the performance cost is acceptable</span>
+<span class="comment">//    |     let s2 = s1.clone();</span>
+
+<span class="comment">// The error message tells you:</span>
+<span class="comment">// 1. What went wrong (borrow of moved value)</span>
+<span class="comment">// 2. Where it happened (line 3)</span>
+<span class="comment">// 3. Why it happened (value moved on line 2)</span>
+<span class="comment">// 4. How to fix it (clone the value)</span>
+
+<span class="comment">// Always read the "help" section - it often has the solution!</span></code>
+            </div>
+            
+            <h3>Troubleshooting Tips</h3>
+            <ol>
+                <li><strong>Read the full error message:</strong> Rust's errors are detailed and helpful</li>
+                <li><strong>Use rustc --explain:</strong> Get extended explanations</li>
+                <li><strong>Check the help section:</strong> Often contains the fix</li>
+                <li><strong>Use clippy:</strong> Catches common mistakes before compilation</li>
+                <li><strong>Simplify the code:</strong> Break complex code into smaller parts</li>
+                <li><strong>Use dbg! macro:</strong> Print values to see what's happening</li>
+                <li><strong>Check lifetimes:</strong> Lifetime errors can be tricky - add explicit lifetimes</li>
+                <li><strong>Use Rc&lt;RefCell&lt;T&gt;&gt;:</strong> For shared mutable data (advanced)</li>
+            </ol>
 
             <h2>Advanced Patterns and Architectures</h2>
             <p>As you advance, you'll encounter these patterns:</p>
-            <ul>
-                <li><strong>Pattern 1:</strong> [Detailed pattern explanation with code examples]</li>
-                <li><strong>Pattern 2:</strong> [Another pattern]</li>
-                <li><strong>Pattern 3:</strong> [Third pattern]</li>
-            </ul>
+            
+            <h3>Pattern 1: Builder Pattern</h3>
+            <p>The builder pattern allows you to construct complex objects step by step. This is common in Rust for configuration:</p>
+            
+            <div class="code-block">
+<code><span class="keyword">pub</span> <span class="keyword">struct</span> <span class="function">HttpClient</span> {
+    url: <span class="function">String</span>,
+    timeout: <span class="function">u64</span>,
+    retries: <span class="function">u32</span>,
+}
+
+<span class="keyword">pub</span> <span class="keyword">struct</span> <span class="function">HttpClientBuilder</span> {
+    url: <span class="function">Option</span>&lt;<span class="function">String</span>&gt;,
+    timeout: <span class="function">Option</span>&lt;<span class="function">u64</span>&gt;,
+    retries: <span class="function">Option</span>&lt;<span class="function">u32</span>&gt;,
+}
+
+<span class="keyword">impl</span> <span class="function">HttpClientBuilder</span> {
+    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="function">new</span>() -> <span class="function">Self</span> {
+        <span class="function">HttpClientBuilder</span> {
+            url: <span class="function">None</span>,
+            timeout: <span class="function">None</span>,
+            retries: <span class="function">None</span>,
+        }
+    }
+    
+    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="function">url</span>(<span class="keyword">mut</span> <span class="keyword">self</span>, url: <span class="function">String</span>) -> <span class="function">Self</span> {
+        <span class="keyword">self</span>.url = <span class="function">Some</span>(url);
+        <span class="keyword">self</span>
+    }
+    
+    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="function">timeout</span>(<span class="keyword">mut</span> <span class="keyword">self</span>, timeout: <span class="function">u64</span>) -> <span class="function">Self</span> {
+        <span class="keyword">self</span>.timeout = <span class="function">Some</span>(timeout);
+        <span class="keyword">self</span>
+    }
+    
+    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="function">retries</span>(<span class="keyword">mut</span> <span class="keyword">self</span>, retries: <span class="function">u32</span>) -> <span class="function">Self</span> {
+        <span class="keyword">self</span>.retries = <span class="function">Some</span>(retries);
+        <span class="keyword">self</span>
+    }
+    
+    <span class="keyword">pub</span> <span class="keyword">fn</span> <span class="function">build</span>(<span class="keyword">self</span>) -> <span class="function">Result</span>&lt;<span class="function">HttpClient</span>, <span class="function">String</span>&gt; {
+        <span class="function">Ok</span>(<span class="function">HttpClient</span> {
+            url: <span class="keyword">self</span>.url.<span class="function">ok_or</span>(<span class="string">"URL required"</span>)?,
+            timeout: <span class="keyword">self</span>.timeout.<span class="function">unwrap_or</span>(<span class="number">30</span>),
+            retries: <span class="keyword">self</span>.retries.<span class="function">unwrap_or</span>(<span class="number">3</span>),
+        })
+    }
+}
+
+<span class="comment">// Usage:</span>
+<span class="keyword">let</span> client = <span class="function">HttpClientBuilder</span>::<span class="function">new</span>()
+    .<span class="function">url</span>(<span class="string">"https://api.example.com"</span>.<span class="function">to_string</span>())
+    .<span class="function">timeout</span>(<span class="number">60</span>)
+    .<span class="function">retries</span>(<span class="number">5</span>)
+    .<span class="function">build</span>()?;</code>
+            </div>
+            
+            <h3>Pattern 2: RAII (Resource Acquisition Is Initialization)</h3>
+            <p>RAII is Rust's fundamental pattern: resources are acquired when objects are created and released when they're destroyed:</p>
+            
+            <div class="code-block">
+<code><span class="keyword">struct</span> <span class="function">File</span> {
+    handle: <span class="function">std</span>::fs::<span class="function">File</span>,
+}
+
+<span class="keyword">impl</span> <span class="function">File</span> {
+    <span class="keyword">fn</span> <span class="function">open</span>(path: &<span class="function">str</span>) -> <span class="function">Result</span>&lt;<span class="function">Self</span>, std::io::<span class="function">Error</span>&gt; {
+        <span class="function">Ok</span>(<span class="function">File</span> {
+            handle: <span class="function">std</span>::fs::<span class="function">File</span>::<span class="function">open</span>(path)?,
+        })
+    }
+}
+
+<span class="comment">// File automatically closes when it goes out of scope</span>
+<span class="keyword">impl</span> <span class="function">Drop</span> <span class="keyword">for</span> <span class="function">File</span> {
+    <span class="keyword">fn</span> <span class="function">drop</span>(&<span class="keyword">mut</span> <span class="keyword">self</span>) {
+        <span class="comment">// File closes automatically - no manual cleanup needed!</span>
+    }
+}</code>
+            </div>
+            
+            <h3>Pattern 3: Error Handling with Result</h3>
+            <p>Rust uses <code class="code-inline">Result&lt;T, E&gt;</code> for error handling instead of exceptions:</p>
+            
+            <div class="code-block">
+<code><span class="keyword">fn</span> <span class="function">divide</span>(a: <span class="function">f64</span>, b: <span class="function">f64</span>) -> <span class="function">Result</span>&lt;<span class="function">f64</span>, <span class="function">String</span>&gt; {
+    <span class="keyword">if</span> b == <span class="number">0.0</span> {
+        <span class="function">Err</span>(<span class="string">"Division by zero"</span>.<span class="function">to_string</span>())
+    } <span class="keyword">else</span> {
+        <span class="function">Ok</span>(a / b)
+    }
+}
+
+<span class="comment">// Using ? operator for error propagation</span>
+<span class="keyword">fn</span> <span class="function">calculate</span>() -> <span class="function">Result</span>&lt;<span class="function">f64</span>, <span class="function">String</span>&gt; {
+    <span class="keyword">let</span> result = <span class="function">divide</span>(<span class="number">10.0</span>, <span class="number">2.0</span>)?;  <span class="comment">// Returns early on error</span>
+    <span class="function">Ok</span>(result * <span class="number">2.0</span>)
+}</code>
+            </div>
 
             <h2>Testing Strategies</h2>
-            <p>How to test rust basics effectively:</p>
-            <ul>
-                <li><strong>Unit Testing:</strong> [How to write unit tests]</li>
-                <li><strong>Integration Testing:</strong> [Integration test strategies]</li>
-                <li><strong>End-to-End Testing:</strong> [E2E testing approaches]</li>
-            </ul>
+            <p>Rust has excellent built-in testing support. Here's how to test Rust code effectively:</p>
+            
+            <h3>Unit Testing</h3>
+            <p>Unit tests go in the same file as your code, in a <code class="code-inline">#[cfg(test)]</code> module:</p>
+            
+            <div class="code-block">
+<code><span class="keyword">pub</span> <span class="keyword">fn</span> <span class="function">add</span>(a: <span class="function">i32</span>, b: <span class="function">i32</span>) -> <span class="function">i32</span> {
+    a + b
+}
+
+#[<span class="function">cfg</span>(test)]
+<span class="keyword">mod</span> tests {
+    <span class="keyword">use</span> <span class="keyword">super</span>::*;
+    
+    #[<span class="function">test</span>]
+    <span class="keyword">fn</span> <span class="function">test_add</span>() {
+        <span class="function">assert_eq!</span>(<span class="function">add</span>(<span class="number">2</span>, <span class="number">3</span>), <span class="number">5</span>);
+    }
+    
+    #[<span class="function">test</span>]
+    #[<span class="function">should_panic</span>(expected = <span class="string">"Division by zero"</span>)]
+    <span class="keyword">fn</span> <span class="function">test_divide_by_zero</span>() {
+        <span class="function">divide</span>(<span class="number">10.0</span>, <span class="number">0.0</span>).<span class="function">unwrap</span>();
+    }
+}
+
+<span class="comment">// Run tests: cargo test</span>
+<span class="comment">// Run specific test: cargo test test_add</span>
+<span class="comment">// Run tests in parallel: cargo test -- --test-threads=1</span></code>
+            </div>
+            
+            <h3>Integration Testing</h3>
+            <p>Integration tests go in <code class="code-inline">tests/</code> directory and test your library as an external user would:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// tests/integration_test.rs</span>
+<span class="keyword">use</span> my_lib;
+
+#[<span class="function">test</span>]
+<span class="keyword">fn</span> <span class="function">test_integration</span>() {
+    <span class="keyword">let</span> result = my_lib::<span class="function">process</span>(<span class="string">"input"</span>);
+    <span class="function">assert_eq!</span>(result, <span class="string">"output"</span>);
+}</code>
+            </div>
+            
+            <h3>Property-Based Testing</h3>
+            <p>Use libraries like <code class="code-inline">proptest</code> for property-based testing:</p>
+            
+            <div class="code-block">
+<code><span class="keyword">use</span> proptest::prelude::*;
+
+<span class="keyword">fn</span> <span class="function">reverse</span>&lt;<span class="function">T</span>&gt;(vec: <span class="function">Vec</span>&lt;<span class="function">T</span>&gt;) -> <span class="function">Vec</span>&lt;<span class="function">T</span>&gt; {
+    <span class="keyword">let</span> <span class="keyword">mut</span> result = vec;
+    result.<span class="function">reverse</span>();
+    result
+}
+
+<span class="function">proptest!</span> {
+    #[<span class="function">test</span>]
+    <span class="keyword">fn</span> <span class="function">test_reverse</span>(vec <span class="keyword">in</span> <span class="function">prop</span>::collection::vec(<span class="number">0</span>..<span class="number">100i32</span>, <span class="number">0</span>..<span class="number">100</span>)) {
+        <span class="keyword">let</span> reversed = <span class="function">reverse</span>(vec.<span class="function">clone</span>());
+        <span class="keyword">let</span> double_reversed = <span class="function">reverse</span>(reversed);
+        <span class="function">prop_assert_eq!</span>(vec, double_reversed);
+    }
+}</code>
+            </div>
 
             <h2>Migration and Upgrading</h2>
-            <p>When you need to migrate or upgrade:</p>
-            <ul>
-                <li><strong>Migration Strategy:</strong> [How to migrate safely]</li>
-                <li><strong>Version Compatibility:</strong> [Understanding versions]</li>
-                <li><strong>Breaking Changes:</strong> [How to handle them]</li>
-            </ul>
+            <p>When you need to migrate or upgrade Rust code:</p>
+            
+            <h3>Migration Strategy: Gradual Migration</h3>
+            <p>When migrating from another language to Rust:</p>
+            <ol>
+                <li><strong>Start with new code:</strong> Write new features in Rust</li>
+                <li><strong>Use FFI:</strong> Call Rust from existing code using FFI</li>
+                <li><strong>Migrate modules:</strong> Migrate one module at a time</li>
+                <li><strong>Test thoroughly:</strong> Ensure each migrated module works correctly</li>
+            </ol>
+            
+            <h3>Version Compatibility</h3>
+            <p>Rust follows semantic versioning. Use <code class="code-inline">rustup</code> to manage versions:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// Check current version</span>
+<span class="function">rustc</span> --version
+
+<span class="comment">// Update Rust</span>
+<span class="function">rustup</span> update
+
+<span class="comment">// Install specific version</span>
+<span class="function">rustup</span> install <span class="number">1.70</span>.0
+
+<span class="comment">// Set default version</span>
+<span class="function">rustup</span> default <span class="number">1.70</span>.0
+
+<span class="comment">// Use specific version for project</span>
+<span class="comment">// Create rust-toolchain file:</span>
+<span class="comment">// 1.70.0</span></code>
+            </div>
+            
+            <h3>Breaking Changes</h3>
+            <p>Rust editions (2015, 2018, 2021) can introduce breaking changes. To migrate:</p>
+            <ol>
+                <li>Update <code class="code-inline">Cargo.toml</code>: <code class="code-inline">edition = "2021"</code></li>
+                <li>Run <code class="code-inline">cargo fix --edition</code> to automatically fix issues</li>
+                <li>Review and test changes</li>
+            </ol>
 
             <h2>Community and Resources</h2>
             <p>Where to learn more and get help:</p>
+            
+            <h3>Official Documentation</h3>
             <ul>
-                <li><strong>Official Documentation:</strong> [Where to find it]</li>
-                <li><strong>Community Forums:</strong> [Best forums]</li>
-                <li><strong>Learning Resources:</strong> [Additional learning materials]</li>
+                <li><strong>The Rust Book:</strong> https://doc.rust-lang.org/book/ - Comprehensive guide</li>
+                <li><strong>Rust by Example:</strong> https://doc.rust-lang.org/rust-by-example/ - Learn by example</li>
+                <li><strong>Rust API Documentation:</strong> https://doc.rust-lang.org/std/ - Standard library docs</li>
+                <li><strong>Rust Reference:</strong> https://doc.rust-lang.org/reference/ - Language reference</li>
+            </ul>
+            
+            <h3>Community Forums</h3>
+            <ul>
+                <li><strong>Rust Users Forum:</strong> https://users.rust-lang.org/ - General discussion</li>
+                <li><strong>Rust Internals Forum:</strong> https://internals.rust-lang.org/ - Language development</li>
+                <li><strong>Stack Overflow:</strong> Tag: rust - Q&A</li>
+                <li><strong>Reddit:</strong> r/rust - Community discussions</li>
+            </ul>
+            
+            <h3>Learning Resources</h3>
+            <ul>
+                <li><strong>Rustlings:</strong> https://github.com/rust-lang/rustlings - Interactive exercises</li>
+                <li><strong>Exercism Rust Track:</strong> https://exercism.org/tracks/rust - Practice problems</li>
+                <li><strong>Rust YouTube Channels:</strong> Many excellent tutorials</li>
+                <li><strong>Rust Blog:</strong> https://blog.rust-lang.org/ - Official blog</li>
             </ul>
 
             <h2>Building a Complete Project</h2>
-            <p>Let's build a complete project using rust basics:</p>
-            <ol>
-                <li><strong>Planning:</strong> [How to plan the project]</li>
-                <li><strong>Setup:</strong> [Initial setup steps]</li>
-                <li><strong>Implementation:</strong> [Step-by-step implementation]</li>
-                <li><strong>Testing:</strong> [How to test the project]</li>
-                <li><strong>Deployment:</strong> [How to deploy]</li>
-            </ol>
+            <p>Let's build a complete project: a command-line TODO application:</p>
+            
+            <h3>Step 1: Planning</h3>
+            <p>Plan your project structure:</p>
+            <ul>
+                <li>What features do you need? (Add, list, delete, complete tasks)</li>
+                <li>How will you store data? (File, database, in-memory)</li>
+                <li>What's the user interface? (CLI, GUI, web)</li>
+            </ul>
+            
+            <h3>Step 2: Setup</h3>
+            <div class="code-block">
+<code><span class="comment">// Create new project</span>
+<span class="function">cargo</span> new todo-cli
+<span class="function">cd</span> todo-cli
+
+<span class="comment">// Add dependencies to Cargo.toml</span>
+<span class="comment">// [dependencies]</span>
+<span class="comment">// serde = { version = "1.0", features = ["derive"] }</span>
+<span class="comment">// serde_json = "1.0"</span>
+<span class="comment">// clap = { version = "4.0", features = ["derive"] }</span></code>
+            </div>
+            
+            <h3>Step 3: Implementation</h3>
+            <div class="code-block">
+<code><span class="comment">// src/main.rs</span>
+<span class="keyword">use</span> clap::{<span class="function">Parser</span>, <span class="function">Subcommand</span>};
+<span class="keyword">use</span> serde::{<span class="function">Deserialize</span>, <span class="function">Serialize</span>};
+<span class="keyword">use</span> std::fs;
+
+#[<span class="function">derive</span>(<span class="function">Parser</span>)]
+<span class="keyword">struct</span> <span class="function">Cli</span> {
+    #[<span class="function">command</span>(subcommand)]
+    command: <span class="function">Commands</span>,
+}
+
+#[<span class="function">derive</span>(<span class="function">Subcommand</span>)]
+<span class="keyword">enum</span> <span class="function">Commands</span> {
+    <span class="function">Add</span> { task: <span class="function">String</span> },
+    <span class="function">List</span>,
+    <span class="function">Complete</span> { index: <span class="function">usize</span> },
+    <span class="function">Delete</span> { index: <span class="function">usize</span> },
+}
+
+#[<span class="function">derive</span>(<span class="function">Serialize</span>, <span class="function">Deserialize</span>)]
+<span class="keyword">struct</span> <span class="function">Task</span> {
+    description: <span class="function">String</span>,
+    completed: <span class="function">bool</span>,
+}
+
+<span class="keyword">fn</span> <span class="function">main</span>() -> <span class="function">Result</span>&lt;(), <span class="function">Box</span>&lt;<span class="function">dyn</span> std::error::<span class="function">Error</span>&gt;&gt; {
+    <span class="keyword">let</span> cli = <span class="function">Cli</span>::<span class="function">parse</span>();
+    
+    <span class="keyword">let</span> <span class="keyword">mut</span> tasks = <span class="function">load_tasks</span>()?;
+    
+    <span class="keyword">match</span> cli.command {
+        <span class="function">Commands</span>::<span class="function">Add</span> { task } => {
+            tasks.<span class="function">push</span>(<span class="function">Task</span> {
+                description: task,
+                completed: <span class="keyword">false</span>,
+            });
+        }
+        <span class="function">Commands</span>::<span class="function">List</span> => {
+            <span class="keyword">for</span> (i, task) <span class="keyword">in</span> tasks.<span class="function">iter</span>().<span class="function">enumerate</span>() {
+                <span class="keyword">let</span> status = <span class="keyword">if</span> task.completed { <span class="string">"✓"</span> } <span class="keyword">else</span> { <span class="string">" "</span> };
+                <span class="function">println!</span>(<span class="string">"{{}} [{{}}] {{}}"</span>, i, status, task.description);
+            }
+        }
+        <span class="function">Commands</span>::<span class="function">Complete</span> { index } => {
+            <span class="keyword">if</span> <span class="keyword">let</span> <span class="function">Some</span>(task) = tasks.<span class="function">get_mut</span>(index) {
+                task.completed = <span class="keyword">true</span>;
+            }
+        }
+        <span class="function">Commands</span>::<span class="function">Delete</span> { index } => {
+            <span class="keyword">if</span> index < tasks.<span class="function">len</span>() {
+                tasks.<span class="function">remove</span>(index);
+            }
+        }
+    }
+    
+    <span class="function">save_tasks</span>(&tasks)?;
+    <span class="function">Ok</span>(())
+}
+
+<span class="keyword">fn</span> <span class="function">load_tasks</span>() -> <span class="function">Result</span>&lt;<span class="function">Vec</span>&lt;<span class="function">Task</span>&gt;, <span class="function">Box</span>&lt;<span class="function">dyn</span> std::error::<span class="function">Error</span>&gt;&gt; {
+    <span class="keyword">let</span> contents = fs::<span class="function">read_to_string</span>(<span class="string">"tasks.json"</span>).<span class="function">unwrap_or_else</span>(|_| <span class="string">"[]"</span>.<span class="function">to_string</span>());
+    <span class="keyword">let</span> tasks: <span class="function">Vec</span>&lt;<span class="function">Task</span>&gt; = serde_json::<span class="function">from_str</span>(&contents)?;
+    <span class="function">Ok</span>(tasks)
+}
+
+<span class="keyword">fn</span> <span class="function">save_tasks</span>(tasks: &<span class="function">Vec</span>&lt;<span class="function">Task</span>&gt;) -> <span class="function">Result</span>&lt;(), <span class="function">Box</span>&lt;<span class="function">dyn</span> std::error::<span class="function">Error</span>&gt;&gt; {
+    <span class="keyword">let</span> contents = serde_json::<span class="function">to_string_pretty</span>(tasks)?;
+    fs::<span class="function">write</span>(<span class="string">"tasks.json"</span>, contents)?;
+    <span class="function">Ok</span>(())
+}</code>
+            </div>
+            
+            <h3>Step 4: Testing</h3>
+            <div class="code-block">
+<code>#[<span class="function">cfg</span>(test)]
+<span class="keyword">mod</span> tests {
+    <span class="keyword">use</span> <span class="keyword">super</span>::*;
+    
+    #[<span class="function">test</span>]
+    <span class="keyword">fn</span> <span class="function">test_add_task</span>() {
+        <span class="keyword">let</span> <span class="keyword">mut</span> tasks = <span class="function">Vec</span>::<span class="function">new</span>();
+        tasks.<span class="function">push</span>(<span class="function">Task</span> {
+            description: <span class="string">"Test task"</span>.<span class="function">to_string</span>(),
+            completed: <span class="keyword">false</span>,
+        });
+        <span class="function">assert_eq!</span>(tasks.<span class="function">len</span>(), <span class="number">1</span>);
+    }
+}</code>
+            </div>
+            
+            <h3>Step 5: Deployment</h3>
+            <div class="code-block">
+<code><span class="comment">// Build release version</span>
+<span class="function">cargo</span> build --release
+
+<span class="comment">// Binary is in target/release/todo-cli</span>
+<span class="comment">// Copy to PATH or distribute</span>
+
+<span class="comment">// Create installer or package for distribution</span>
+<span class="comment">// For Windows: Use Inno Setup or WiX</span>
+<span class="comment">// For Linux: Create .deb or .rpm package</span>
+<span class="comment">// For macOS: Create .dmg</span></code>
+            </div>
 
             <h2>Further Reading and Next Steps</h2>
-            <p>To continue your journey with rust basics:</p>
+            <p>To continue your journey with Rust:</p>
             <ul>
-                <li>[Recommended resource 1]</li>
-                <li>[Recommended resource 2]</li>
-                <li>[Recommended resource 3]</li>
+                <li><strong>Read "The Rust Book":</strong> Complete guide to Rust</li>
+                <li><strong>Practice with Rustlings:</strong> Interactive exercises</li>
+                <li><strong>Build projects:</strong> Apply what you've learned</li>
+                <li><strong>Join the community:</strong> Participate in forums and discussions</li>
+                <li><strong>Read Rust code:</strong> Study open-source Rust projects</li>
+                <li><strong>Learn async Rust:</strong> Tokio and async/await</li>
+                <li><strong>Explore WebAssembly:</strong> Compile Rust to WASM</li>
             </ul>
 
 
             <h2>Comprehensive Deep Dive: Understanding Every Detail</h2>
-            <p>Let's take a deep dive into rust basics. We'll explore every aspect in detail, ensuring you understand not just what to do, but why it works this way.</p>
+            <p>Let's take a deep dive into Rust. We'll explore every aspect in detail, ensuring you understand not just what to do, but why it works this way.</p>
 
             <h3>Historical Context and Evolution</h3>
-            <p>Understanding where rust basics came from helps you understand why it works the way it does:</p>
+            <p>Understanding where Rust came from helps you understand why it works the way it does:</p>
+            
+            <h4>Origins: The Problem Rust Solves</h4>
+            <p>Rust was created by Graydon Hoare at Mozilla Research, starting in 2006. The goal was to create a systems programming language that:</p>
             <ul>
-                <li><strong>Origins:</strong> [How and why this technology was created]</li>
-                <li><strong>Evolution:</strong> [How it has changed over time]</li>
-                <li><strong>Current State:</strong> [Where it is today]</li>
-                <li><strong>Future Direction:</strong> [Where it's heading]</li>
+                <li>Prevents memory safety bugs (like C/C++ have)</li>
+                <li>Prevents data races (concurrency bugs)</li>
+                <li>Maintains C++-level performance</li>
+                <li>Has modern language features</li>
+            </ul>
+            
+            <p>The key insight: Most bugs in systems programming come from memory safety issues. If you can prevent these at compile time, you eliminate entire classes of bugs.</p>
+            
+            <h4>Evolution: From Research to Production</h4>
+            <p>Rust's evolution:</p>
+            <ul>
+                <li><strong>2006-2010:</strong> Research phase, language design</li>
+                <li><strong>2010:</strong> First public release (0.1)</li>
+                <li><strong>2015:</strong> Rust 1.0 - first stable release</li>
+                <li><strong>2018:</strong> Rust 2018 edition - async/await, modules</li>
+                <li><strong>2021:</strong> Rust 2021 edition - improved error handling</li>
+                <li><strong>Today:</strong> Used by major companies (Microsoft, Google, Amazon, Meta)</li>
+            </ul>
+            
+            <h4>Current State: Production-Ready</h4>
+            <p>Rust is now:</p>
+            <ul>
+                <li>Used in production by major tech companies</li>
+                <li>Part of the Linux kernel (as of 2023)</li>
+                <li>Used in critical infrastructure (browsers, databases, operating systems)</li>
+                <li>One of the most loved programming languages (Stack Overflow surveys)</li>
+            </ul>
+            
+            <h4>Future Direction</h4>
+            <p>Rust's future focuses on:</p>
+            <ul>
+                <li>Better async/await support</li>
+                <li>Improved compile times</li>
+                <li>Better IDE support</li>
+                <li>More ergonomic patterns</li>
+                <li>Expansion into new domains (kernel development, embedded systems)</li>
             </ul>
 
             <h3>Architecture and Design Principles</h3>
-            <p>The architecture of rust basics is built on specific design principles:</p>
+            <p>Rust's architecture is built on specific design principles:</p>
+            
+            <h4>Principle 1: Zero-Cost Abstractions</h4>
+            <p>High-level abstractions should compile to code as efficient as hand-written low-level code:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// High-level iterator code</span>
+<span class="keyword">let</span> sum: <span class="function">i32</span> = (<span class="number">1</span>..<span class="number">100</span>)
+    .<span class="function">filter</span>(|x| x % <span class="number">2</span> == <span class="number">0</span>)
+    .<span class="function">map</span>(|x| x * <span class="number">2</span>)
+    .<span class="function">sum</span>();
+
+<span class="comment">// Compiles to the same efficient code as:</span>
+<span class="keyword">let</span> <span class="keyword">mut</span> sum = <span class="number">0</span>;
+<span class="keyword">for</span> i <span class="keyword">in</span> <span class="number">1</span>..<span class="number">100</span> {
+    <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span> {
+        sum += i * <span class="number">2</span>;
+    }
+}
+
+<span class="comment">// No runtime overhead - abstractions are "zero-cost"</span></code>
+            </div>
+            
+            <h4>Principle 2: Memory Safety Without Garbage Collection</h4>
+            <p>Rust achieves memory safety through:</p>
             <ul>
-                <li><strong>Principle 1:</strong> [Detailed explanation with examples]</li>
-                <li><strong>Principle 2:</strong> [Another principle explained deeply]</li>
-                <li><strong>Principle 3:</strong> [Third principle]</li>
+                <li><strong>Ownership:</strong> Each value has one owner</li>
+                <li><strong>Borrowing:</strong> References are checked at compile time</li>
+                <li><strong>Lifetimes:</strong> References can't outlive the data they point to</li>
             </ul>
+            
+            <p>This eliminates the need for garbage collection while preventing memory errors.</p>
+            
+            <h4>Principle 3: Fearless Concurrency</h4>
+            <p>Rust's ownership system prevents data races at compile time:</p>
+            
+            <div class="code-block">
+<code><span class="comment">// This won't compile - prevents data race!</span>
+<span class="keyword">use</span> std::thread;
+
+<span class="keyword">let</span> <span class="keyword">mut</span> data = <span class="function">vec!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>];
+
+<span class="keyword">let</span> handle = thread::<span class="function">spawn</span>(|| {
+    data.<span class="function">push</span>(<span class="number">4</span>);  <span class="comment">// ERROR! Can't mutate data from another thread</span>
+});
+
+handle.<span class="function">join</span>().<span class="function">unwrap</span>();
+
+<span class="comment">// Solution: Use Arc&lt;Mutex&lt;T&gt;&gt; for shared mutable data</span>
+<span class="keyword">use</span> std::sync::{<span class="function">Arc</span>, <span class="function">Mutex</span>};
+
+<span class="keyword">let</span> data = <span class="function">Arc</span>::<span class="function">new</span>(<span class="function">Mutex</span>::<span class="function">new</span>(<span class="function">vec!</span>[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]));
+<span class="keyword">let</span> data_clone = <span class="function">Arc</span>::<span class="function">clone</span>(&data);
+
+<span class="keyword">let</span> handle = thread::<span class="function">spawn</span>(<span class="keyword">move</span> || {
+    <span class="keyword">let</span> <span class="keyword">mut</span> data = data_clone.<span class="function">lock</span>().<span class="function">unwrap</span>();
+    data.<span class="function">push</span>(<span class="number">4</span>);  <span class="comment">// OK! Protected by Mutex</span>
+});
+
+handle.<span class="function">join</span>().<span class="function">unwrap</span>();</code>
+            </div>
+            
+            <h4>Principle 4: Explicit Over Implicit</h4>
+            <p>Rust makes everything explicit - no hidden behavior:</p>
+            <ul>
+                <li>No null pointers (use <code class="code-inline">Option&lt;T&gt;</code>)</li>
+                <li>No exceptions (use <code class="code-inline">Result&lt;T, E&gt;</code>)</li>
+                <li>No implicit conversions</li>
+                <li>No hidden allocations</li>
+            </ul>
+            
+            <p>This makes code predictable and easier to reason about.</p>
 
             <h2>Detailed Code Examples and Walkthroughs</h2>
             <p>Let's work through comprehensive examples, line by line:</p>
